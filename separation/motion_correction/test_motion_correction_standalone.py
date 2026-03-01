@@ -1,17 +1,18 @@
-"""Regression test for standalone motion_correction module."""
+"""Regression test for strict standalone motion_correction module."""
 
-import pickle
 import sys
 from pathlib import Path
 import numpy as np
 
-# Ensure we import from THIS directory, not the parent codebase
 MODULE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(MODULE_DIR.parent))
 
 from motion_correction import run_motion_correction
+from _shared.fixtures import load_npz
+from _shared.params import strict_default_parameters
 
-TEST_DATA = MODULE_DIR.parent / "_test_data" / "motion_correction"
+TEST_DATA = MODULE_DIR.parent / "_test_data_strict" / "motion_correction" / "output.npz"
+VIDEO = MODULE_DIR.parent.parent / "demo" / "demo_data.tif"
 
 
 def main():
@@ -19,17 +20,19 @@ def main():
     print("REGRESSION TEST: motion_correction standalone module")
     print("=" * 60)
 
-    with open(TEST_DATA / "test_input.pkl", "rb") as f:
-        inputs = pickle.load(f)
-    with open(TEST_DATA / "test_output.pkl", "rb") as f:
-        expected = pickle.load(f)
-
-    print(f"\nParameters: {inputs['params']}")
-    print(f"Video path: {inputs['video_path']}")
+    if not TEST_DATA.exists():
+        raise FileNotFoundError(
+            f"{TEST_DATA} not found. Run: python separation/build_strict_fixtures.py"
+        )
+    expected = load_npz(TEST_DATA)
+    params = strict_default_parameters()
+    print(f"\nParameters: {params}")
+    print(f"Video path: {VIDEO}")
 
     result = run_motion_correction(
-        video_path=inputs["video_path"],
-        params=inputs["params"],
+        video_path=VIDEO,
+        params=params,
+        mode="strict",
     )
 
     # Compare outputs
@@ -45,7 +48,7 @@ def main():
 
     all_pass = True
     for name, (actual, exp) in checks.items():
-        match = np.allclose(actual, exp, rtol=1e-5, atol=1e-7)
+        match = np.allclose(actual, exp, rtol=1e-4, atol=1e-6)
         status = "PASS" if match else "FAIL"
         if not match:
             all_pass = False

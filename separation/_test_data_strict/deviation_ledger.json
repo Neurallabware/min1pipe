@@ -1,0 +1,45 @@
+{
+  "status": "matlab_compared",
+  "fields": {
+    "imaxn": {
+      "shape_match": 1.0,
+      "max_abs_dev": 0.030304431915283203,
+      "max_rel_dev": 0.11539126702787941
+    },
+    "imaxy": {
+      "shape_match": 1.0,
+      "max_abs_dev": 0.7676970511674881,
+      "max_rel_dev": 61717923.11343949
+    },
+    "imax": {
+      "shape_match": 1.0,
+      "max_abs_dev": 0.8171892017126083,
+      "max_rel_dev": 397142136979455.6
+    },
+    "roifn": {
+      "shape_match": 0.0,
+      "max_abs_dev": Infinity,
+      "max_rel_dev": Infinity
+    },
+    "sigfn": {
+      "shape_match": 0.0,
+      "max_abs_dev": Infinity,
+      "max_rel_dev": Infinity
+    },
+    "seeds_c0": {
+      "shape_match": 0.0,
+      "max_abs_dev": Infinity,
+      "max_rel_dev": Infinity
+    },
+    "raw_score": {
+      "shape_match": 0.0,
+      "max_abs_dev": Infinity,
+      "max_rel_dev": Infinity
+    },
+    "corr_score": {
+      "shape_match": 0.0,
+      "max_abs_dev": Infinity,
+      "max_rel_dev": Infinity
+    }
+  }
+}

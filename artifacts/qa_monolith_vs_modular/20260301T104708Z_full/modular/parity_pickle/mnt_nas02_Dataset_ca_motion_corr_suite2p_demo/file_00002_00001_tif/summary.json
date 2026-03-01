@@ -1,0 +1,179 @@
+{
+  "motion__frames_ds": {
+    "shape": [
+      100,
+      331,
+      394
+    ],
+    "dtype": "float32",
+    "min": 0.2347547709941864,
+    "max": 1.0,
+    "mean": 0.5426425337791443
+  },
+  "motion__imaxn": {
+    "shape": [
+      331,
+      394
+    ],
+    "dtype": "float32",
+    "min": 0.4670833945274353,
+    "max": 1.0,
+    "mean": 0.7216935753822327
+  },
+  "motion__imeanf": {
+    "shape": [
+      331,
+      394
+    ],
+    "dtype": "float32",
+    "min": 0.46564534306526184,
+    "max": 1.0,
+    "mean": 0.5426425337791443
+  },
+  "motion__imaxy_pre": {
+    "shape": [
+      331,
+      394
+    ],
+    "dtype": "float32",
+    "min": 0.46818071603775024,
+    "max": 0.9938102960586548,
+    "mean": 0.5934817790985107
+  },
+  "motion__corrected_video": {
+    "shape": [
+      100,
+      331,
+      394
+    ],
+    "dtype": "float32",
+    "min": 0.45813989639282227,
+    "max": 0.9938102960586548,
+    "mean": 0.5426461100578308
+  },
+  "motion__raw_score": {
+    "shape": [
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 2.0,
+    "mean": 0.0982842743396759
+  },
+  "motion__corr_score": {
+    "shape": [
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  "motion__imax": {
+    "shape": [
+      331,
+      394
+    ],
+    "dtype": "float32",
+    "min": 0.46818071603775024,
+    "max": 0.9938102960586548,
+    "mean": 0.5937221050262451
+  },
+  "source__roifn": {
+    "shape": [
+      130414,
+      80
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.001204469008371234
+  },
+  "source__sigfn": {
+    "shape": [
+      80,
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.5089458227157593,
+    "max": 0.7460218071937561,
+    "mean": 0.6178745031356812
+  },
+  "source__seedsfn": {
+    "shape": [
+      80
+    ],
+    "dtype": "int64",
+    "min": 29276.0,
+    "max": 101801.0,
+    "mean": 64956.3
+  },
+  "component__roifn": {
+    "shape": [
+      130414,
+      80
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 1.0,
+    "mean": 0.001204469008371234
+  },
+  "component__sigfn": {
+    "shape": [
+      80,
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.5089458227157593,
+    "max": 0.7460218071937561,
+    "mean": 0.6178745031356812
+  },
+  "component__seedsfn": {
+    "shape": [
+      80
+    ],
+    "dtype": "int64",
+    "min": 29276.0,
+    "max": 101801.0,
+    "mean": 64956.3
+  },
+  "component__bgfn": {
+    "shape": [
+      130414
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  "component__bgffn": {
+    "shape": [
+      1,
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 0.0,
+    "mean": 0.0
+  },
+  "deconv__spkfn": {
+    "shape": [
+      80,
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 0.07327252626419067,
+    "mean": 0.003416355699300766
+  },
+  "deconv__dff": {
+    "shape": [
+      80,
+      100
+    ],
+    "dtype": "float32",
+    "min": 0.0,
+    "max": 0.22712938487529755,
+    "mean": 0.04328329488635063
+  }
+}

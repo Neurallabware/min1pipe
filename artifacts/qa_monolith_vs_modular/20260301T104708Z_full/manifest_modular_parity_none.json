@@ -1,0 +1,125 @@
+{
+  "created_at_utc": "2026-03-01T10:48:30.954955+00:00",
+  "runner": "run_modular_capture.py",
+  "dataset_roots": [
+    "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+    "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+    "/mnt/nas02/Dataset/ca_motion_corr/fiola"
+  ],
+  "supported_suffixes": [
+    ".avi",
+    ".mat",
+    ".tif",
+    ".tiff"
+  ],
+  "mode": "parity",
+  "serialization": "none",
+  "max_frames": null,
+  "params": {
+    "Fsi": 20.0,
+    "Fsi_new": 10.0,
+    "spatialr": 0.5,
+    "neuron_size": 5,
+    "ismc": true,
+    "flag": 1,
+    "ttype": "single",
+    "anidenoise_iter": 4,
+    "anidenoise_dt": 0.14285714285714285,
+    "anidenoise_kappa": 0.5,
+    "anidenoise_opt": 1,
+    "anidenoise_ispara": 1,
+    "bg_remove_ispara": 1,
+    "mc_scl": 0.004,
+    "mc_sigma_x": 5,
+    "mc_sigma_f": 10,
+    "mc_sigma_d": 1,
+    "pix_select_sigthres": 0.8,
+    "pix_select_corrthres": 0.6,
+    "refine_roi_ispara": 1,
+    "merge_roi_corrthres": 0.9,
+    "max_seeds": 80,
+    "seed_random_iters": 50,
+    "seed_max_per_iter": 500,
+    "seed_gmm_prob_thres": 0.5,
+    "seed_intensity_scale": 1.0,
+    "trace_clean_tflag": 2,
+    "rnn_model_path": null
+  },
+  "captures": [
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_path": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p/demoMovie.tif",
+      "file_rel": "demoMovie.tif",
+      "dataset_key": "mnt_nas02_Dataset_ca_motion_corr_caiman_2p",
+      "file_key": "demoMovie_tif",
+      "size_bytes": 19466632,
+      "capture_npz": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_caiman_2p/demoMovie_tif/capture.npz",
+      "capture_summary": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_caiman_2p/demoMovie_tif/summary.json",
+      "mode": "parity",
+      "serialization": "none",
+      "max_frames": null
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_path": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo/file_00002_00001.tif",
+      "file_rel": "file_00002_00001.tif",
+      "dataset_key": "mnt_nas02_Dataset_ca_motion_corr_suite2p_demo",
+      "file_key": "file_00002_00001_tif",
+      "size_bytes": 242110007,
+      "capture_npz": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_suite2p_demo/file_00002_00001_tif/capture.npz",
+      "capture_summary": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_suite2p_demo/file_00002_00001_tif/summary.json",
+      "mode": "parity",
+      "serialization": "none",
+      "max_frames": null
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_path": "/mnt/nas02/Dataset/ca_motion_corr/fiola/Sue_2x_3000_40_-46.tif",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "dataset_key": "mnt_nas02_Dataset_ca_motion_corr_fiola",
+      "file_key": "Sue_2x_3000_40__46_tif",
+      "size_bytes": 347214136,
+      "capture_npz": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_fiola/Sue_2x_3000_40__46_tif/capture.npz",
+      "capture_summary": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_fiola/Sue_2x_3000_40__46_tif/summary.json",
+      "mode": "parity",
+      "serialization": "none",
+      "max_frames": null
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_path": "/mnt/nas02/Dataset/ca_motion_corr/fiola/demoMovie.tif",
+      "file_rel": "demoMovie.tif",
+      "dataset_key": "mnt_nas02_Dataset_ca_motion_corr_fiola",
+      "file_key": "demoMovie_tif",
+      "size_bytes": 19466632,
+      "capture_npz": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_fiola/demoMovie_tif/capture.npz",
+      "capture_summary": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_fiola/demoMovie_tif/summary.json",
+      "mode": "parity",
+      "serialization": "none",
+      "max_frames": null
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_path": "/mnt/nas02/Dataset/ca_motion_corr/fiola/demo_voltage_imaging_init.tif",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "dataset_key": "mnt_nas02_Dataset_ca_motion_corr_fiola",
+      "file_key": "demo_voltage_imaging_init_tif",
+      "size_bytes": 802760124,
+      "capture_npz": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_fiola/demo_voltage_imaging_init_tif/capture.npz",
+      "capture_summary": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/modular/parity_none/mnt_nas02_Dataset_ca_motion_corr_fiola/demo_voltage_imaging_init_tif/summary.json",
+      "mode": "parity",
+      "serialization": "none",
+      "max_frames": null
+    }
+  ],
+  "skipped": [
+    {
+      "file": "/mnt/nas02/Dataset/ca_motion_corr/fiola/demo_voltage_imaging.hdf5",
+      "reason": "unsupported_format:.hdf5"
+    },
+    {
+      "file": "/mnt/nas02/Dataset/ca_motion_corr/fiola/demo_voltage_imaging_ROIs.hdf5",
+      "reason": "unsupported_format:.hdf5"
+    }
+  ]
+}

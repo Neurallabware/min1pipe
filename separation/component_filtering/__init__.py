@@ -1,8 +1,7 @@
-"""Standalone component filtering module for calcium imaging.
+"""Strict standalone component filtering module for calcium imaging.
 
-Extracted from the MIN1PIPE pipeline. This module is fully self-contained.
-
-Pipeline: ROIs + signals -> scale/normalize -> merge (future) -> filter -> output
+Pipeline: merge_roi -> refine_roi -> bg_update -> refine_sig -> final_seeds_select
+-> trace_clean.
 """
 
 from .core import run_component_filtering, ComponentFilteringResult

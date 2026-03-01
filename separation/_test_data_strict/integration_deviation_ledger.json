@@ -1,0 +1,309 @@
+{
+  "pass": true,
+  "ledger": {
+    "motion_correction": {
+      "corrected_video": {
+        "pass": true,
+        "shape_actual": [
+          1000,
+          150,
+          150
+        ],
+        "shape_expected": [
+          1000,
+          150,
+          150
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "imaxy": {
+        "pass": true,
+        "shape_actual": [
+          150,
+          150
+        ],
+        "shape_expected": [
+          150,
+          150
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "imaxy_pre": {
+        "pass": true,
+        "shape_actual": [
+          150,
+          150
+        ],
+        "shape_expected": [
+          150,
+          150
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "imaxn": {
+        "pass": true,
+        "shape_actual": [
+          150,
+          150
+        ],
+        "shape_expected": [
+          150,
+          150
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "imeanf": {
+        "pass": true,
+        "shape_actual": [
+          150,
+          150
+        ],
+        "shape_expected": [
+          150,
+          150
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "imax": {
+        "pass": true,
+        "shape_actual": [
+          150,
+          150
+        ],
+        "shape_expected": [
+          150,
+          150
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "raw_score": {
+        "pass": true,
+        "shape_actual": [
+          1000
+        ],
+        "shape_expected": [
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "corr_score": {
+        "pass": true,
+        "shape_actual": [
+          1000
+        ],
+        "shape_expected": [
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      }
+    },
+    "source_detection": {
+      "roifn": {
+        "pass": true,
+        "shape_actual": [
+          22500,
+          15
+        ],
+        "shape_expected": [
+          22500,
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "sigfn": {
+        "pass": true,
+        "shape_actual": [
+          15,
+          1000
+        ],
+        "shape_expected": [
+          15,
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "seedsfn": {
+        "pass": true,
+        "shape_actual": [
+          15
+        ],
+        "shape_expected": [
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "datasmth": {
+        "pass": true,
+        "shape_actual": [
+          15,
+          981
+        ],
+        "shape_expected": [
+          15,
+          981
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "cutoff": {
+        "pass": true,
+        "shape_actual": [
+          15
+        ],
+        "shape_expected": [
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "pkcutoff": {
+        "pass": true,
+        "shape_actual": [
+          15
+        ],
+        "shape_expected": [
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      }
+    },
+    "component_filtering": {
+      "roifn": {
+        "pass": true,
+        "shape_actual": [
+          22500,
+          15
+        ],
+        "shape_expected": [
+          22500,
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "sigfn": {
+        "pass": true,
+        "shape_actual": [
+          15,
+          1000
+        ],
+        "shape_expected": [
+          15,
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "seedsfn": {
+        "pass": true,
+        "shape_actual": [
+          15
+        ],
+        "shape_expected": [
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "bgfn": {
+        "pass": true,
+        "shape_actual": [
+          22500
+        ],
+        "shape_expected": [
+          22500
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "bgffn": {
+        "pass": true,
+        "shape_actual": [
+          1,
+          1000
+        ],
+        "shape_expected": [
+          1,
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "datasmth": {
+        "pass": true,
+        "shape_actual": [
+          15,
+          981
+        ],
+        "shape_expected": [
+          15,
+          981
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "cutoff": {
+        "pass": true,
+        "shape_actual": [
+          15
+        ],
+        "shape_expected": [
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "pkcutoff": {
+        "pass": true,
+        "shape_actual": [
+          15
+        ],
+        "shape_expected": [
+          15
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      }
+    },
+    "calcium_deconvolution": {
+      "spkfn": {
+        "pass": true,
+        "shape_actual": [
+          15,
+          1000
+        ],
+        "shape_expected": [
+          15,
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      },
+      "dff": {
+        "pass": true,
+        "shape_actual": [
+          15,
+          1000
+        ],
+        "shape_expected": [
+          15,
+          1000
+        ],
+        "max_abs_dev": 0.0,
+        "max_rel_dev": 0.0
+      }
+    }
+  }
+}

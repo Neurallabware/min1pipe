@@ -1,0 +1,4621 @@
+{
+  "run_dir": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full",
+  "tolerance": {
+    "rtol": 0.0001,
+    "atol": 1e-06
+  },
+  "variants": {
+    "parity_none": {
+      "manifest": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/manifest_modular_parity_none.json",
+      "rows": 90,
+      "files": 5,
+      "pass": true,
+      "first_divergences": [
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+          "file_rel": "demoMovie.tif",
+          "variant": "parity_none",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+          "file_rel": "Sue_2x_3000_40_-46.tif",
+          "variant": "parity_none",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+          "file_rel": "demoMovie.tif",
+          "variant": "parity_none",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+          "file_rel": "demo_voltage_imaging_init.tif",
+          "variant": "parity_none",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+          "file_rel": "file_00002_00001.tif",
+          "variant": "parity_none",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        }
+      ]
+    },
+    "parity_pickle": {
+      "manifest": "/home/yz/MIN1PIPE/artifacts/qa_monolith_vs_modular/20260301T104708Z_full/manifest_modular_parity_pickle.json",
+      "rows": 90,
+      "files": 5,
+      "pass": true,
+      "first_divergences": [
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+          "file_rel": "demoMovie.tif",
+          "variant": "parity_pickle",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+          "file_rel": "Sue_2x_3000_40_-46.tif",
+          "variant": "parity_pickle",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+          "file_rel": "demoMovie.tif",
+          "variant": "parity_pickle",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+          "file_rel": "demo_voltage_imaging_init.tif",
+          "variant": "parity_pickle",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        },
+        {
+          "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+          "file_rel": "file_00002_00001.tif",
+          "variant": "parity_pickle",
+          "all_pass": true,
+          "first_divergence": "<none>"
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1200
+      ],
+      "shape_expected": [
+        1200
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        1000
+      ],
+      "shape_expected": [
+        1,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1500,
+        85,
+        85
+      ],
+      "shape_expected": [
+        1500,
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1500,
+        85,
+        85
+      ],
+      "shape_expected": [
+        1500,
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1500
+      ],
+      "shape_expected": [
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1500
+      ],
+      "shape_expected": [
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        7225,
+        26
+      ],
+      "shape_expected": [
+        7225,
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        26
+      ],
+      "shape_expected": [
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        7225,
+        26
+      ],
+      "shape_expected": [
+        7225,
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        26
+      ],
+      "shape_expected": [
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        7225
+      ],
+      "shape_expected": [
+        7225
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        1500
+      ],
+      "shape_expected": [
+        1,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1200
+      ],
+      "shape_expected": [
+        1200
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        1000
+      ],
+      "shape_expected": [
+        1,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        5000,
+        50,
+        50
+      ],
+      "shape_expected": [
+        5000,
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        5000,
+        50,
+        50
+      ],
+      "shape_expected": [
+        5000,
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        5000
+      ],
+      "shape_expected": [
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        5000
+      ],
+      "shape_expected": [
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        2500,
+        11
+      ],
+      "shape_expected": [
+        2500,
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        11
+      ],
+      "shape_expected": [
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        2500,
+        11
+      ],
+      "shape_expected": [
+        2500,
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        11
+      ],
+      "shape_expected": [
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        2500
+      ],
+      "shape_expected": [
+        2500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        5000
+      ],
+      "shape_expected": [
+        1,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        100,
+        331,
+        394
+      ],
+      "shape_expected": [
+        100,
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        100,
+        331,
+        394
+      ],
+      "shape_expected": [
+        100,
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        100
+      ],
+      "shape_expected": [
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        100
+      ],
+      "shape_expected": [
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        130414,
+        80
+      ],
+      "shape_expected": [
+        130414,
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": null,
+      "shape_actual": [
+        80
+      ],
+      "shape_expected": [
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        130414,
+        80
+      ],
+      "shape_expected": [
+        130414,
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": null,
+      "shape_actual": [
+        80
+      ],
+      "shape_expected": [
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        130414
+      ],
+      "shape_expected": [
+        130414
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        100
+      ],
+      "shape_expected": [
+        1,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1200
+      ],
+      "shape_expected": [
+        1200
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        1000
+      ],
+      "shape_expected": [
+        1,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1500,
+        85,
+        85
+      ],
+      "shape_expected": [
+        1500,
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1500,
+        85,
+        85
+      ],
+      "shape_expected": [
+        1500,
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1500
+      ],
+      "shape_expected": [
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1500
+      ],
+      "shape_expected": [
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        85,
+        85
+      ],
+      "shape_expected": [
+        85,
+        85
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        7225,
+        26
+      ],
+      "shape_expected": [
+        7225,
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        26
+      ],
+      "shape_expected": [
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        7225,
+        26
+      ],
+      "shape_expected": [
+        7225,
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        26
+      ],
+      "shape_expected": [
+        26
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        7225
+      ],
+      "shape_expected": [
+        7225
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        1500
+      ],
+      "shape_expected": [
+        1,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        26,
+        1500
+      ],
+      "shape_expected": [
+        26,
+        1500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        1000,
+        30,
+        40
+      ],
+      "shape_expected": [
+        1000,
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1000
+      ],
+      "shape_expected": [
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        30,
+        40
+      ],
+      "shape_expected": [
+        30,
+        40
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        1200,
+        6
+      ],
+      "shape_expected": [
+        1200,
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6
+      ],
+      "shape_expected": [
+        6
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1200
+      ],
+      "shape_expected": [
+        1200
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        1000
+      ],
+      "shape_expected": [
+        1,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        6,
+        1000
+      ],
+      "shape_expected": [
+        6,
+        1000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        5000,
+        50,
+        50
+      ],
+      "shape_expected": [
+        5000,
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        5000,
+        50,
+        50
+      ],
+      "shape_expected": [
+        5000,
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        5000
+      ],
+      "shape_expected": [
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        5000
+      ],
+      "shape_expected": [
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        50,
+        50
+      ],
+      "shape_expected": [
+        50,
+        50
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        2500,
+        11
+      ],
+      "shape_expected": [
+        2500,
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        11
+      ],
+      "shape_expected": [
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        2500,
+        11
+      ],
+      "shape_expected": [
+        2500,
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        11
+      ],
+      "shape_expected": [
+        11
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        2500
+      ],
+      "shape_expected": [
+        2500
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        5000
+      ],
+      "shape_expected": [
+        1,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        11,
+        5000
+      ],
+      "shape_expected": [
+        11,
+        5000
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        100,
+        331,
+        394
+      ],
+      "shape_expected": [
+        100,
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        100,
+        331,
+        394
+      ],
+      "shape_expected": [
+        100,
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        100
+      ],
+      "shape_expected": [
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        100
+      ],
+      "shape_expected": [
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        331,
+        394
+      ],
+      "shape_expected": [
+        331,
+        394
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        130414,
+        80
+      ],
+      "shape_expected": [
+        130414,
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": null,
+      "shape_actual": [
+        80
+      ],
+      "shape_expected": [
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999,
+      "ssim": 1.0,
+      "shape_actual": [
+        130414,
+        80
+      ],
+      "shape_expected": [
+        130414,
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998,
+      "ssim": null,
+      "shape_actual": [
+        80
+      ],
+      "shape_expected": [
+        80
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        130414
+      ],
+      "shape_expected": [
+        130414
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": null,
+      "shape_actual": [
+        1,
+        100
+      ],
+      "shape_expected": [
+        1,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0,
+      "ssim": 1.0,
+      "shape_actual": [
+        80,
+        100
+      ],
+      "shape_expected": [
+        80,
+        100
+      ],
+      "reason": ""
+    }
+  ],
+  "summary": [
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_none",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_none",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_none",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_none",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "variant": "parity_pickle",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "variant": "parity_pickle",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "variant": "parity_pickle",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "variant": "parity_pickle",
+      "all_pass": true,
+      "first_divergence": "<none>"
+    }
+  ],
+  "serialization_probe": [
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/caiman/2p",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "Sue_2x_3000_40_-46.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demoMovie.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/fiola",
+      "file_rel": "demo_voltage_imaging_init.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__frames_ds",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imeanf",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imaxy_pre",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corrected_video",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__raw_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__corr_score",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "motion__imax",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "source__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "source__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "source__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "component__roifn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999999
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "component__sigfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "component__seedsfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 0.9999999999999998
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "component__bgffn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__spkfn",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    },
+    {
+      "dataset_root": "/mnt/nas02/Dataset/ca_motion_corr/suite2p/demo",
+      "file_rel": "file_00002_00001.tif",
+      "probe_variant": "pickle",
+      "field": "deconv__dff",
+      "pass": true,
+      "max_abs_err": 0.0,
+      "max_rel_err": 0.0,
+      "corrcoef": 1.0
+    }
+  ],
+  "skipped": [
+    {
+      "file": "/mnt/nas02/Dataset/ca_motion_corr/fiola/demo_voltage_imaging.hdf5",
+      "reason": "unsupported_format:.hdf5"
+    },
+    {
+      "file": "/mnt/nas02/Dataset/ca_motion_corr/fiola/demo_voltage_imaging_ROIs.hdf5",
+      "reason": "unsupported_format:.hdf5"
+    }
+  ]
+}

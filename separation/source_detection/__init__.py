@@ -1,9 +1,7 @@
-"""Standalone source detection module for calcium imaging.
+"""Strict standalone source detection module for calcium imaging.
 
-Extracted from the MIN1PIPE pipeline. This module is fully self-contained.
-
-Pipeline: corrected_video → detect seeds (local maxima) → build ROI footprints
-         → extract temporal traces
+Pipeline: over-complete seed init → coarse GMM/statistical cleansing →
+seed merge → ROI/trace initialization.
 """
 
 from .core import run_source_detection, SourceDetectionResult
