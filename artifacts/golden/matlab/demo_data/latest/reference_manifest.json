@@ -1,0 +1,24 @@
+{
+  "generated_utc": "2026-02-28T17:06:30Z",
+  "repo_root": "/home/yz/MIN1PIPE",
+  "matlab_version": "25.2.0.3042426 (R2025b) Update 1",
+  "input_dataset": "/home/yz/MIN1PIPE/demo/demo_data.tif",
+  "parameters": {
+    "Fsi": 20,
+    "Fsi_new": 20,
+    "ismc": true,
+    "flag": 1
+  },
+  "outputs": {
+    "processed": "/home/yz/MIN1PIPE/artifacts/golden/matlab/demo_data/latest/demo_data_data_processed.mat",
+    "raw": "/home/yz/MIN1PIPE/artifacts/golden/matlab/demo_data/latest/demo_data_frame_all.mat",
+    "reg": "/home/yz/MIN1PIPE/artifacts/golden/matlab/demo_data/latest/demo_data_reg.mat",
+    "figure": "/home/yz/MIN1PIPE/artifacts/golden/matlab/demo_data/latest/demo_visualization_matlab.png"
+  },
+  "sha256": {
+    "demo_data_data_processed.mat": "81bd6734c92df8e733a0fa09b003dfe49240c94df1a8a6be560cf7bf9c2238a0",
+    "demo_data_frame_all.mat": "0ae03102a05df04956a41603ca907c956e8d67b5777b322274bce6b1dd5698c9",
+    "demo_data_reg.mat": "6fef718ae845affa2746f7a74762273a49021a2028f66ad5a26016f2e22f77bd",
+    "demo_visualization_matlab.png": "5bed6d8ecfa8560134b4ceac42c93c5f0314ffc71d0057a01850d691368541c9"
+  }
+}
