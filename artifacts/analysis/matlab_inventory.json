@@ -1,0 +1,3151 @@
+{
+  "generated_from": "/home/yz/MIN1PIPE",
+  "total_files": 146,
+  "files": [
+    {
+      "path": "demo_min1pipe.m",
+      "sha256": "8ef9f8310ef78499d94f91d9666e25ec0c79cbc65dc6192d4d8269e5a66b503e",
+      "loc": 128,
+      "is_script": true,
+      "function_name": null,
+      "inputs": [],
+      "outputs": [],
+      "dependencies": [
+        "min1pipe.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/parse_type.m",
+        "utilities/postprocess/plot_contour.m",
+        "utilities/postprocess/real_neuron_select.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/demo_min1pipe.py"
+    },
+    {
+      "path": "demo_min1pipe_HPC.m",
+      "sha256": "d0dc094db98f2710fff6adb8f48189fa9017fb0779f546969b2753e887ccd3f2",
+      "loc": 133,
+      "is_script": true,
+      "function_name": null,
+      "inputs": [],
+      "outputs": [],
+      "dependencies": [
+        "min1pipe_HPC.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/parse_type.m",
+        "utilities/postprocess/plot_contour.m",
+        "utilities/postprocess/real_neuron_select.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/demo_min1pipe_HPC.py"
+    },
+    {
+      "path": "min1pipe.m",
+      "sha256": "1498a84eff80fdc01de01f0b63caf3a9923d6459070713eb37893ab62a176c7a",
+      "loc": 292,
+      "is_script": false,
+      "function_name": "min1pipe",
+      "inputs": [
+        "Fsi",
+        "Fsi_new",
+        "spatialr",
+        "se",
+        "ismc",
+        "flag"
+      ],
+      "outputs": [
+        "file_name_to_save",
+        "filename_raw",
+        "filename_reg"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/bg_update.m",
+        "utilities/elements/data_cat.m",
+        "utilities/elements/downsamp.m",
+        "utilities/elements/final_seeds_select.m",
+        "utilities/elements/frame_reg.m",
+        "utilities/elements/iter_seeds_select.m",
+        "utilities/elements/judge_file.m",
+        "utilities/elements/merge_roi.m",
+        "utilities/elements/neural_enhance.m",
+        "utilities/elements/noise_suppress.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/par_init.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/pure_refine_sig.m",
+        "utilities/elements/refine_roi.m",
+        "utilities/elements/refine_sig.m",
+        "utilities/elements/remove_dp.m",
+        "utilities/elements/trace_clean.m",
+        "utilities/movement_correction/dominant_patch.m",
+        "utilities/movement_correction/frame_stab.m",
+        "utilities/movement_correction/iminterpolate.m",
+        "utilities/movement_correction/logdemons_unit.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/min1pipe.py"
+    },
+    {
+      "path": "min1pipe_HPC.m",
+      "sha256": "38bed317ce7130aaa43e10e740fe49aebf77edc3ecc819e676830d76547a4944",
+      "loc": 284,
+      "is_script": false,
+      "function_name": "min1pipe_HPC",
+      "inputs": [
+        "Fsi",
+        "Fsi_new",
+        "spatialr",
+        "se",
+        "ismc",
+        "flag",
+        "path_name",
+        "file_name"
+      ],
+      "outputs": [
+        "file_name_to_save",
+        "filename_raw",
+        "filename_reg"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/bg_update.m",
+        "utilities/elements/data_cat.m",
+        "utilities/elements/data_info_HPC.m",
+        "utilities/elements/downsamp.m",
+        "utilities/elements/final_seeds_select.m",
+        "utilities/elements/frame_reg.m",
+        "utilities/elements/iter_seeds_select.m",
+        "utilities/elements/judge_file.m",
+        "utilities/elements/merge_roi.m",
+        "utilities/elements/neural_enhance.m",
+        "utilities/elements/noise_suppress.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/par_init.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/pure_refine_sig.m",
+        "utilities/elements/refine_roi.m",
+        "utilities/elements/refine_sig.m",
+        "utilities/elements/remove_dp.m",
+        "utilities/elements/trace_clean.m",
+        "utilities/movement_correction/dominant_patch.m",
+        "utilities/movement_correction/frame_stab.m",
+        "utilities/movement_correction/iminterpolate.m",
+        "utilities/movement_correction/logdemons_unit.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/min1pipe_HPC.py"
+    },
+    {
+      "path": "min1pipe_old.m",
+      "sha256": "d6d6a221fb2787797be57018658dbdc2e3c4e058f22818fdb5203b18d4d67557",
+      "loc": 285,
+      "is_script": false,
+      "function_name": "min1pipe",
+      "inputs": [
+        "Fsi",
+        "Fsi_new",
+        "spatialr",
+        "se",
+        "ismc",
+        "flag"
+      ],
+      "outputs": [
+        "file_name_to_save",
+        "filename_raw",
+        "filename_reg"
+      ],
+      "dependencies": [
+        "min1pipe.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/data_cat.m",
+        "utilities/elements/frame_reg.m",
+        "utilities/elements/judge_file.m",
+        "utilities/elements/manual_seeds_select.m",
+        "utilities/elements/merge_roi.m",
+        "utilities/elements/neural_enhance.m",
+        "utilities/elements/noise_suppress.m",
+        "utilities/elements/par_init.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/pix_select.m",
+        "utilities/elements/pure_refine_sig.m",
+        "utilities/elements/refine_roi.m",
+        "utilities/elements/refine_sig.m",
+        "utilities/elements/trace_clean.m",
+        "utilities/movement_correction/dominant_patch.m",
+        "utilities/movement_correction/frame_stab.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/min1pipe_old.py"
+    },
+    {
+      "path": "utilities/CNMF/CNMFSetParms.m",
+      "sha256": "3b4dc4e94476b221d22d3ada9b23995edde498ce8ede13798b5f0b4542dbf33d",
+      "loc": 268,
+      "is_script": false,
+      "function_name": "CNMFSetParms",
+      "inputs": [
+        "varargin"
+      ],
+      "outputs": [
+        "options"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/CNMFSetParms.py"
+    },
+    {
+      "path": "utilities/CNMF/constrained_foopsi.m",
+      "sha256": "80399af4d9eb248a2f383156c08ab45d7f3a1a56d25ce55b69dcfc36451262fd",
+      "loc": 298,
+      "is_script": false,
+      "function_name": "constrained_foopsi",
+      "inputs": [
+        "y",
+        "b",
+        "c1",
+        "g",
+        "sn",
+        "options"
+      ],
+      "outputs": [
+        "c",
+        "b",
+        "c1",
+        "g",
+        "sn",
+        "sp"
+      ],
+      "dependencies": [
+        "utilities/CNMF/cvx_foopsi.m",
+        "utilities/CNMF/lars_regression_noise.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/constrained_foopsi.py"
+    },
+    {
+      "path": "utilities/CNMF/cvx_foopsi.m",
+      "sha256": "6844ceaf63d585090a575885eb50e2ed298cc5e341950dd4b870f921810ed474",
+      "loc": 46,
+      "is_script": false,
+      "function_name": "cvx_foopsi",
+      "inputs": [
+        "y",
+        "b",
+        "c1",
+        "sn",
+        "b_lb",
+        "g",
+        "w",
+        "keep"
+      ],
+      "outputs": [
+        "c",
+        "b",
+        "c1"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/cvx_foopsi.py"
+    },
+    {
+      "path": "utilities/CNMF/find_unsaturatedPixels.m",
+      "sha256": "5e3fb370d961142a92c39f23130c6286f35a65dc36bbe35996322dec18d5735a",
+      "loc": 24,
+      "is_script": false,
+      "function_name": "find_unsaturatedPixels",
+      "inputs": [
+        "Y",
+        "saturationValue",
+        "saturationThreshold",
+        "saturationTime"
+      ],
+      "outputs": [
+        "normalPixels"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/find_unsaturatedPixels.py"
+    },
+    {
+      "path": "utilities/CNMF/get_noise_fft.m",
+      "sha256": "f2abd52aa02056208c6e23c6a59bb1be382d411e122cf613b1775968d26c7da3",
+      "loc": 45,
+      "is_script": false,
+      "function_name": "get_noise_fft",
+      "inputs": [
+        "m",
+        "options"
+      ],
+      "outputs": [
+        "sn",
+        "psdx",
+        "ff"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/parse_type.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/get_noise_fft.py"
+    },
+    {
+      "path": "utilities/CNMF/init_roi.m",
+      "sha256": "05ac928a5f80cc35e23ca3f042ff0e01fc7468ca79fc6261a144cebaa1f7f1d4",
+      "loc": 23,
+      "is_script": false,
+      "function_name": "init_roi",
+      "inputs": [
+        "data",
+        "sig",
+        "nIter"
+      ],
+      "outputs": [
+        "roi",
+        "sig"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/init_roi.py"
+    },
+    {
+      "path": "utilities/CNMF/kmeans_pp.m",
+      "sha256": "374b059448ba5087b53d9856c46f99c6848d05b526c5e2a5ec1c560f231a9eef",
+      "loc": 67,
+      "is_script": false,
+      "function_name": "kmeans_pp",
+      "inputs": [
+        "X",
+        "k"
+      ],
+      "outputs": [
+        "L",
+        "C"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/kmeans_pp.py"
+    },
+    {
+      "path": "utilities/CNMF/lars_regression_noise.m",
+      "sha256": "f91b4be76cc5bc5403461cecda9646b1f866e8ff48117d363801c53eda0c397e",
+      "loc": 299,
+      "is_script": false,
+      "function_name": "lars_regression_noise",
+      "inputs": [
+        "Y",
+        "X",
+        "positive",
+        "noise"
+      ],
+      "outputs": [
+        "Ws",
+        "lambdas",
+        "W_lam",
+        "lam",
+        "flag"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/lars_regression_noise.py"
+    },
+    {
+      "path": "utilities/CNMF/preprocess_data.m",
+      "sha256": "c1d47aa785d1bbd0dc36549ee12df7e48913567e0de85beda9484d3d18c4fa07",
+      "loc": 51,
+      "is_script": false,
+      "function_name": "preprocess_data",
+      "inputs": [
+        "m",
+        "p",
+        "options"
+      ],
+      "outputs": [
+        "P",
+        "m"
+      ],
+      "dependencies": [
+        "utilities/CNMF/get_noise_fft.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/preprocess_data.py"
+    },
+    {
+      "path": "utilities/CNMF/update_order.m",
+      "sha256": "e538733c4d4e5e8a85121130f2b4dd50125d2fcff970feb56f6f43f7141f6ff7",
+      "loc": 30,
+      "is_script": false,
+      "function_name": "update_order",
+      "inputs": [
+        "A"
+      ],
+      "outputs": [
+        "O",
+        "lo"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/CNMF/update_order.py"
+    },
+    {
+      "path": "utilities/RNN/batch_init.m",
+      "sha256": "820ccdcbf4b2df8ed160ba83827ff98b13b5ee1ec4e641a80d8d45939897fb09",
+      "loc": 19,
+      "is_script": false,
+      "function_name": "batch_init",
+      "inputs": [
+        "xin",
+        "bsize",
+        "lbin"
+      ],
+      "outputs": [
+        "xbatch"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/batch_init.py"
+    },
+    {
+      "path": "utilities/RNN/bprop.m",
+      "sha256": "7e6cd735b75488f977fc76151d2178a3da6b70c925e5aa313f20e91aedf8b271",
+      "loc": 63,
+      "is_script": false,
+      "function_name": "bprop",
+      "inputs": [
+        "lstmc",
+        "Wt",
+        "Ut",
+        "P",
+        "lbin",
+        "pars"
+      ],
+      "outputs": [
+        "gradt"
+      ],
+      "dependencies": [
+        "utilities/RNN/zeroMatrix.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/bprop.py"
+    },
+    {
+      "path": "utilities/RNN/check_grad.m",
+      "sha256": "3cf46f7db70441608b5ac8871b06a3f6e1472f057fdc76d66f69334cabbf5602",
+      "loc": 23,
+      "is_script": false,
+      "function_name": "check_grad",
+      "inputs": [
+        "grad",
+        "W",
+        "U",
+        "xin",
+        "lbin",
+        "ht1",
+        "ct1",
+        "ifcheck"
+      ],
+      "outputs": [],
+      "dependencies": [
+        "utilities/RNN/cross_entropy_loss.m",
+        "utilities/RNN/fprop.m",
+        "utilities/RNN/softm.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/check_grad.py"
+    },
+    {
+      "path": "utilities/RNN/cross_entropy_loss.m",
+      "sha256": "c4c7e2ff819a4b749f487e7d1bd4619b3b1cf65afdf66c3622d4da15a6db8a98",
+      "loc": 7,
+      "is_script": false,
+      "function_name": "cross_entropy_loss",
+      "inputs": [
+        "P",
+        "lbin"
+      ],
+      "outputs": [
+        "cost"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/cross_entropy_loss.py"
+    },
+    {
+      "path": "utilities/RNN/dSigmf.m",
+      "sha256": "268d300b778ef46b13c085f25d98da520cf9906dd3c3bcb103d5bfda295717cf",
+      "loc": 5,
+      "is_script": false,
+      "function_name": "dSigmf",
+      "inputs": [
+        "x",
+        "y",
+        "z"
+      ],
+      "outputs": [
+        "psi"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/dSigmf.py"
+    },
+    {
+      "path": "utilities/RNN/dTanh.m",
+      "sha256": "751be8c277fc6374e646dc39a842680f21c67093cb390179cddc9953b7baa98d",
+      "loc": 5,
+      "is_script": false,
+      "function_name": "dTanh",
+      "inputs": [
+        "x",
+        "y",
+        "z"
+      ],
+      "outputs": [
+        "psi"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/dTanh.py"
+    },
+    {
+      "path": "utilities/RNN/dTanhSum.m",
+      "sha256": "ddf9e257b13ed477fb07019c923e0e937015dd580c624304eba08424eea2b9c0",
+      "loc": 5,
+      "is_script": false,
+      "function_name": "dTanhSum",
+      "inputs": [
+        "t",
+        "x",
+        "y",
+        "z"
+      ],
+      "outputs": [
+        "psi"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/dTanhSum.py"
+    },
+    {
+      "path": "utilities/RNN/fprop.m",
+      "sha256": "14949a48e591f0b90529690fa2a7cac6921816b8c00001457414faa35cde8189",
+      "loc": 39,
+      "is_script": false,
+      "function_name": "fprop",
+      "inputs": [
+        "xin",
+        "Wt",
+        "ht1",
+        "ct1"
+      ],
+      "outputs": [
+        "lstmc"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/fprop.py"
+    },
+    {
+      "path": "utilities/RNN/initMatrix.m",
+      "sha256": "ec69694972baeb5d0b7ddb9f436e0ab78dee2494fb379b05bea8e40f426c8a5b",
+      "loc": 10,
+      "is_script": false,
+      "function_name": "initMatrix",
+      "inputs": [
+        "h",
+        "w",
+        "gpu"
+      ],
+      "outputs": [
+        "out"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/initMatrix.py"
+    },
+    {
+      "path": "utilities/RNN/label_predict.m",
+      "sha256": "6a519c006f7350a85c6453e87fcf1beed95fec0a94921b192aa720d014145f73",
+      "loc": 6,
+      "is_script": false,
+      "function_name": "label_predict",
+      "inputs": [
+        "P"
+      ],
+      "outputs": [
+        "predicts"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/label_predict.py"
+    },
+    {
+      "path": "utilities/RNN/lstm_init.m",
+      "sha256": "610ec695eaadd61a72a91dbda088f21200a7f681979fb892a9ec61833e2788d3",
+      "loc": 24,
+      "is_script": false,
+      "function_name": "lstm_init",
+      "inputs": [
+        "pars"
+      ],
+      "outputs": [
+        "Wt",
+        "Ut",
+        "ht1",
+        "ct1"
+      ],
+      "dependencies": [
+        "utilities/RNN/initMatrix.m",
+        "utilities/RNN/zeroMatrix.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/lstm_init.py"
+    },
+    {
+      "path": "utilities/RNN/lstm_predict_unit.m",
+      "sha256": "7cfe17428f449acdbf8ffdd9431e7b2997bcbe481289b2f50cb791da26e9c89a",
+      "loc": 10,
+      "is_script": false,
+      "function_name": "lstm_predict_unit",
+      "inputs": [
+        "data",
+        "W",
+        "U",
+        "ht1test",
+        "ct1test"
+      ],
+      "outputs": [
+        "labelout",
+        "P"
+      ],
+      "dependencies": [
+        "utilities/RNN/fprop.m",
+        "utilities/RNN/label_predict.m",
+        "utilities/RNN/softm.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/lstm_predict_unit.py"
+    },
+    {
+      "path": "utilities/RNN/lstm_train.m",
+      "sha256": "fceb2fc11ce2207e5691b1541a01449fcc4b2a7f4e3b91c4a16a24c9e72bcfec",
+      "loc": 98,
+      "is_script": false,
+      "function_name": "lstm_train",
+      "inputs": [
+        "xin",
+        "lbin",
+        "pars",
+        "xval",
+        "lbval",
+        "parsval",
+        "optim",
+        "Wall",
+        "Uall"
+      ],
+      "outputs": [
+        "Wall",
+        "Uall",
+        "tp",
+        "acc",
+        "cren",
+        "acct"
+      ],
+      "dependencies": [
+        "utilities/RNN/batch_init.m",
+        "utilities/RNN/bprop.m",
+        "utilities/RNN/check_grad.m",
+        "utilities/RNN/cross_entropy_loss.m",
+        "utilities/RNN/fprop.m",
+        "utilities/RNN/lstm_init.m",
+        "utilities/RNN/lstm_val.m",
+        "utilities/RNN/optimizer_init.m",
+        "utilities/RNN/sgd_adam.m",
+        "utilities/RNN/sgd_rmsprop.m",
+        "utilities/RNN/softm.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/lstm_train.py"
+    },
+    {
+      "path": "utilities/RNN/lstm_val.m",
+      "sha256": "67f1cc6635ec4030132b6d58cf9ffd74b7c00759c39c0fc3901c4b1543375e3a",
+      "loc": 6,
+      "is_script": false,
+      "function_name": "lstm_val",
+      "inputs": [
+        "lbval",
+        "P"
+      ],
+      "outputs": [
+        "acc"
+      ],
+      "dependencies": [
+        "utilities/RNN/label_predict.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/lstm_val.py"
+    },
+    {
+      "path": "utilities/RNN/optimizer_init.m",
+      "sha256": "e0aecca83fdfef132f21e340e1d6c55fb268ef5cf1779797b7acd4ccb331042b",
+      "loc": 30,
+      "is_script": false,
+      "function_name": "optimizer_init",
+      "inputs": [
+        "pars",
+        "optim"
+      ],
+      "outputs": [
+        "varargout"
+      ],
+      "dependencies": [
+        "utilities/RNN/zeroMatrix.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/optimizer_init.py"
+    },
+    {
+      "path": "utilities/RNN/rnn_lstm_ca_detector_train.m",
+      "sha256": "0419e7260572914b2be300682a2e5ca2ff530444d244b34a1ae88dbb4cc1643d",
+      "loc": 65,
+      "is_script": true,
+      "function_name": null,
+      "inputs": [],
+      "outputs": [],
+      "dependencies": [
+        "utilities/RNN/lstm_train.m",
+        "utilities/RNN/seeds_cleansing_rnn.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/rnn_lstm_ca_detector_train.py"
+    },
+    {
+      "path": "utilities/RNN/seeds_cleansing_rnn.m",
+      "sha256": "1ad5a6541d171040bfc14f867b9f753e6d3d57f4b36ea6c735b54908399954e8",
+      "loc": 75,
+      "is_script": false,
+      "function_name": "seeds_cleansing_rnn",
+      "inputs": [
+        "xtest",
+        "model",
+        "stride"
+      ],
+      "outputs": [
+        "labelout",
+        "prob"
+      ],
+      "dependencies": [
+        "utilities/RNN/lstm_init.m",
+        "utilities/RNN/lstm_predict_unit.m",
+        "utilities/RNN/zeroMatrix.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/seeds_cleansing_rnn.py"
+    },
+    {
+      "path": "utilities/RNN/sgd_adam.m",
+      "sha256": "8a3cb47915c8bda542c7240d4873e1f18872cc0f0bc0ef71f69f5c21ef2976ca",
+      "loc": 32,
+      "is_script": false,
+      "function_name": "sgd_adam",
+      "inputs": [
+        "Wt1",
+        "dW",
+        "mt1",
+        "vt1",
+        "t",
+        "lr",
+        "beta"
+      ],
+      "outputs": [
+        "Wt",
+        "m",
+        "v"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/sgd_adam.py"
+    },
+    {
+      "path": "utilities/RNN/sgd_rmsprop.m",
+      "sha256": "bb6037cc744bb22183c49964c4dfd79a6e35ecda0c283bf5ef7b34c20a0cc280",
+      "loc": 24,
+      "is_script": false,
+      "function_name": "sgd_rmsprop",
+      "inputs": [
+        "Wt1",
+        "dW",
+        "et1",
+        "lr",
+        "gamma"
+      ],
+      "outputs": [
+        "Wt",
+        "et"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/sgd_rmsprop.py"
+    },
+    {
+      "path": "utilities/RNN/softm.m",
+      "sha256": "c907e09d9838e67f3d6838aa5f7b7ea07d5ab0292670ab1cf7cf2d3f6867b064",
+      "loc": 8,
+      "is_script": false,
+      "function_name": "softm",
+      "inputs": [
+        "Ut",
+        "lstmc"
+      ],
+      "outputs": [
+        "P"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/softm.py"
+    },
+    {
+      "path": "utilities/RNN/zeroMatrix.m",
+      "sha256": "1d5e5d673ec1c742e394970d675fc1855220307860b4aec916eff7e3c86ddf16",
+      "loc": 9,
+      "is_script": false,
+      "function_name": "zeroMatrix",
+      "inputs": [
+        "sz",
+        "gpu"
+      ],
+      "outputs": [
+        "M"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/RNN/zeroMatrix.py"
+    },
+    {
+      "path": "utilities/elements/anidenoise.m",
+      "sha256": "0183999bfaa296dbbc6f890f3364bdf34ea4a1b537d750ec3cac19a1e5966f3d",
+      "loc": 80,
+      "is_script": false,
+      "function_name": "anidenoise",
+      "inputs": [
+        "Y",
+        "sz",
+        "ispara",
+        "iter",
+        "dt",
+        "kappa",
+        "opt"
+      ],
+      "outputs": [
+        "YDeN"
+      ],
+      "dependencies": [
+        "utilities/elements/anisodiff_unit.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/anidenoise.py"
+    },
+    {
+      "path": "utilities/elements/anisodiff_unit.m",
+      "sha256": "1343c6d0a3a9412e676a047c60656835a4ac1ae00c32be0984db377542563262",
+      "loc": 128,
+      "is_script": false,
+      "function_name": "anisodiff_unit",
+      "inputs": [
+        "im",
+        "num_iter",
+        "delta_t",
+        "kappa",
+        "option"
+      ],
+      "outputs": [
+        "diff_im"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/anisodiff_unit.py"
+    },
+    {
+      "path": "utilities/elements/auto_detect_params.m",
+      "sha256": "b250e1b2cf188f28d2a8a676259edcad210b53a24a276a9ecba1560a6b1df761",
+      "loc": 52,
+      "is_script": false,
+      "function_name": "auto_detect_params",
+      "inputs": [
+        "a"
+      ],
+      "outputs": [
+        "se",
+        "spatialr"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/auto_detect_params.py"
+    },
+    {
+      "path": "utilities/elements/batch_compute.m",
+      "sha256": "7ae19fa1a4cc43499eb32f738a6235bb79e6a617ff839148ea79582c31f6e796",
+      "loc": 27,
+      "is_script": false,
+      "function_name": "batch_compute",
+      "inputs": [
+        "nsize"
+      ],
+      "outputs": [
+        "nbatch"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/batch_compute.py"
+    },
+    {
+      "path": "utilities/elements/bg_extract.m",
+      "sha256": "1513e3e2f62cb2e76f4095d5dbe167081ceed1d1e8f7a0f8b6c0fab98b9d1841",
+      "loc": 31,
+      "is_script": false,
+      "function_name": "bg_extract",
+      "inputs": [
+        "data"
+      ],
+      "outputs": [
+        "bg"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/bg_extract.py"
+    },
+    {
+      "path": "utilities/elements/bg_remove.m",
+      "sha256": "327394f7c4d2bc3920bab56f336628f972cfbaaa01de793544e1a1d3162eb22e",
+      "loc": 63,
+      "is_script": false,
+      "function_name": "bg_remove",
+      "inputs": [
+        "Y",
+        "sz",
+        "ispara"
+      ],
+      "outputs": [
+        "Ydebg"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/bg_remove.py"
+    },
+    {
+      "path": "utilities/elements/bg_update.m",
+      "sha256": "1fa835e36d390154572c579cfee29516b104c883fc153b1d306f18d669175086",
+      "loc": 36,
+      "is_script": false,
+      "function_name": "bg_update",
+      "inputs": [
+        "m",
+        "roi",
+        "sig"
+      ],
+      "outputs": [
+        "b",
+        "bf"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/bg_update.py"
+    },
+    {
+      "path": "utilities/elements/binaryImageGraph.m",
+      "sha256": "89f2b934b2c6e58dc6a9eaae463e1d769026f02840b843432e5703595711137a",
+      "loc": 92,
+      "is_script": false,
+      "function_name": "binaryImageGraph",
+      "inputs": [
+        "bw",
+        "conn"
+      ],
+      "outputs": [
+        "g",
+        "nodenums"
+      ],
+      "dependencies": [
+        "utilities/elements/binaryImageGraph3.m",
+        "utilities/elements/checkConnectivity.m",
+        "utilities/elements/requireR2015b.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/binaryImageGraph.py"
+    },
+    {
+      "path": "utilities/elements/binaryImageGraph3.m",
+      "sha256": "9174aa168b73ddb04b4d8f3e3872e1102a7b34b1be66a2d8f0108b6d1c104102",
+      "loc": 146,
+      "is_script": false,
+      "function_name": "binaryImageGraph3",
+      "inputs": [
+        "bw",
+        "conn"
+      ],
+      "outputs": [
+        "g",
+        "nodenums"
+      ],
+      "dependencies": [
+        "utilities/elements/checkConnectivity.m",
+        "utilities/elements/requireR2015b.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/binaryImageGraph3.py"
+    },
+    {
+      "path": "utilities/elements/checkConnectivity.m",
+      "sha256": "5e0572faff50d5732e89b79980101505d0877e0c6a42c4c14b0897782a91c68e",
+      "loc": 43,
+      "is_script": false,
+      "function_name": "checkConnectivity",
+      "inputs": [
+        "conn"
+      ],
+      "outputs": [
+        "conn"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/checkConnectivity.py"
+    },
+    {
+      "path": "utilities/elements/compute_dff.m",
+      "sha256": "da3738de119d0207b6a84ae331884455a5d1024b0755be61bd3bf45f195c6e13",
+      "loc": 11,
+      "is_script": false,
+      "function_name": "compute_dff",
+      "inputs": [
+        "sigfn",
+        "bgfn",
+        "bgffn",
+        "seedsfn"
+      ],
+      "outputs": [
+        "dff"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/compute_dff.py"
+    },
+    {
+      "path": "utilities/elements/data_cat.m",
+      "sha256": "5309bb7d4d46e9406af8a98e3999733415015483b17ce975383cee803df6c252",
+      "loc": 370,
+      "is_script": false,
+      "function_name": "data_cat",
+      "inputs": [
+        "path_name",
+        "file_base",
+        "file_fmt",
+        "Fsi",
+        "Fsi_new",
+        "ratio",
+        "ttype"
+      ],
+      "outputs": [
+        "m",
+        "filename",
+        "imaxf",
+        "imeanf",
+        "pixh",
+        "pixw",
+        "nf",
+        "imx1",
+        "imn1"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/judge_file.m",
+        "utilities/elements/normalize_batch.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/savef.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/data_cat.py"
+    },
+    {
+      "path": "utilities/elements/data_info.m",
+      "sha256": "15a428f90ecdbbe603b8ed5596b8ab0be97b4fe38c5ab3427ce9fb95fc3adb02",
+      "loc": 51,
+      "is_script": false,
+      "function_name": "data_info",
+      "inputs": [],
+      "outputs": [
+        "path_name",
+        "file_base",
+        "file_fmt"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/data_info.py"
+    },
+    {
+      "path": "utilities/elements/data_info_HPC.m",
+      "sha256": "38a7e1475b54575068320dc896c6578b7fc8f686616ac3ee106b6d0d73d400d4",
+      "loc": 51,
+      "is_script": false,
+      "function_name": "data_info_HPC",
+      "inputs": [
+        "file_name_tmp",
+        "path_name"
+      ],
+      "outputs": [
+        "path_name",
+        "file_base",
+        "file_fmt"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/data_info_HPC.py"
+    },
+    {
+      "path": "utilities/elements/default_parameters.m",
+      "sha256": "091c3632820355040cf8186c44d990eacbb754e8a25242da1b83d5ed53e27dec",
+      "loc": 25,
+      "is_script": false,
+      "function_name": "default_parameters",
+      "inputs": [],
+      "outputs": [
+        "Params"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/default_parameters.py"
+    },
+    {
+      "path": "utilities/elements/dirt_clean.m",
+      "sha256": "21f838b62e51d15ee018a07081fab98b3536795759fbadcedaeed83b0a590c1e",
+      "loc": 49,
+      "is_script": false,
+      "function_name": "dirt_clean",
+      "inputs": [
+        "Y",
+        "sz",
+        "ispara"
+      ],
+      "outputs": [
+        "Ydcln"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/dirt_clean.py"
+    },
+    {
+      "path": "utilities/elements/downsamp.m",
+      "sha256": "5d9fb5ecc5404d05306b69ebbbeeaaff05df2dd4c46bea2196e82b081dd6a5a2",
+      "loc": 21,
+      "is_script": false,
+      "function_name": "downsamp",
+      "inputs": [
+        "path_name",
+        "file_base",
+        "m_in",
+        "Params",
+        "aflag",
+        "imaxn"
+      ],
+      "outputs": [
+        "m_out",
+        "Params",
+        "pixh",
+        "pixw"
+      ],
+      "dependencies": [
+        "utilities/elements/auto_detect_params.m",
+        "utilities/elements/downsamp_unit.m",
+        "utilities/elements/judge_file.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/downsamp.py"
+    },
+    {
+      "path": "utilities/elements/downsamp_unit.m",
+      "sha256": "8e76ff318e60115bddd5f5b2d18e8cbe6953af7a7dde75defe6250fa5a68edeb",
+      "loc": 39,
+      "is_script": false,
+      "function_name": "downsamp_unit",
+      "inputs": [
+        "m_in",
+        "spatialr",
+        "ttype"
+      ],
+      "outputs": [
+        "m_out",
+        "pixh",
+        "pixw"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/savef.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/downsamp_unit.py"
+    },
+    {
+      "path": "utilities/elements/final_seeds_select.m",
+      "sha256": "09ceae4aef1fa61c7d35e85b1ec7a5645b2d96e398181360442c53b7fd20bfbc",
+      "loc": 66,
+      "is_script": false,
+      "function_name": "final_seeds_select",
+      "inputs": [
+        "m",
+        "roi",
+        "sig",
+        "seeds",
+        "datasmth",
+        "cutoff",
+        "pkcutoff",
+        "sz",
+        "maxall"
+      ],
+      "outputs": [
+        "roi",
+        "sig",
+        "seeds",
+        "datasmth",
+        "cutoff",
+        "pkcutoff"
+      ],
+      "dependencies": [
+        "utilities/elements/intensity_filter.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/final_seeds_select.py"
+    },
+    {
+      "path": "utilities/elements/frame_reg.m",
+      "sha256": "224f4bf9668a5be6a56c8f6017c77542490e99d922923718d793791584edfc63",
+      "loc": 142,
+      "is_script": false,
+      "function_name": "frame_reg",
+      "inputs": [
+        "m",
+        "imaxn",
+        "se",
+        "Fs",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d"
+      ],
+      "outputs": [
+        "m",
+        "acorrf",
+        "acorr",
+        "scl",
+        "imax"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/normalize_batch.m",
+        "utilities/elements/parse_type.m",
+        "utilities/movement_correction/dominant_patch.m",
+        "utilities/movement_correction/feature2_comp.m",
+        "utilities/movement_correction/frame_stab.m",
+        "utilities/movement_correction/get_trans_score.m",
+        "utilities/movement_correction/hier_clust.m",
+        "utilities/movement_correction/inter_section.m",
+        "utilities/movement_correction/intra_section.m",
+        "utilities/movement_correction/nonstable_section.m",
+        "utilities/movement_correction/section_update.m",
+        "utilities/movement_correction/select_gpu.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/frame_reg.py"
+    },
+    {
+      "path": "utilities/elements/frame_sample.m",
+      "sha256": "bdd0c763e22dcbd3098a2f473dee86a52ef672f5a7052af21f5bb683fd229b23",
+      "loc": 35,
+      "is_script": false,
+      "function_name": "frame_sample",
+      "inputs": [
+        "m"
+      ],
+      "outputs": [
+        "se",
+        "spatialr"
+      ],
+      "dependencies": [
+        "utilities/elements/auto_detect_params.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/frame_sample.py"
+    },
+    {
+      "path": "utilities/elements/graph_cost.m",
+      "sha256": "b0fd1925b51085cd1f765b860feccabf4bcc53a89137b05ea6a8e51c34eb2eb6",
+      "loc": 8,
+      "is_script": false,
+      "function_name": "graph_cost",
+      "inputs": [
+        "aint",
+        "bint"
+      ],
+      "outputs": [
+        "wts"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/graph_cost.py"
+    },
+    {
+      "path": "utilities/elements/imageGraph.m",
+      "sha256": "dd7f7f74f27150993219b275c03a305d6dfd417c5357abf4fd7843261648717a",
+      "loc": 74,
+      "is_script": false,
+      "function_name": "imageGraph",
+      "inputs": [
+        "sz",
+        "conn"
+      ],
+      "outputs": [
+        "g"
+      ],
+      "dependencies": [
+        "utilities/elements/binaryImageGraph.m",
+        "utilities/elements/checkConnectivity.m",
+        "utilities/elements/requireR2015b.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/imageGraph.py"
+    },
+    {
+      "path": "utilities/elements/intensity_filter.m",
+      "sha256": "5f58b8c824cf730a4959f5dc316af0ec9f2ccef75962a44cddbafc3d2d53f4cc",
+      "loc": 60,
+      "is_script": false,
+      "function_name": "intensity_filter",
+      "inputs": [
+        "maxall"
+      ],
+      "outputs": [
+        "ithres"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/intensity_filter.py"
+    },
+    {
+      "path": "utilities/elements/iter_seeds_select.m",
+      "sha256": "d59a81ed26f5810c00d8d01343cfdc688ffd1da533d44f0b47c07225ccd2a15f",
+      "loc": 93,
+      "is_script": false,
+      "function_name": "iter_seeds_select",
+      "inputs": [
+        "m_in",
+        "mask",
+        "Params",
+        "P",
+        "options",
+        "flag"
+      ],
+      "outputs": [
+        "siguse",
+        "roiuse",
+        "seedsuse",
+        "buse",
+        "bfuse",
+        "datasmthuse",
+        "cutoffuse",
+        "pkcutoffuse"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/bg_update.m",
+        "utilities/elements/manual_seeds_select.m",
+        "utilities/elements/pix_select.m",
+        "utilities/elements/refine_roi.m",
+        "utilities/elements/refine_sig.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/iter_seeds_select.py"
+    },
+    {
+      "path": "utilities/elements/judge_file.m",
+      "sha256": "3b3e13b5ef83902aa9e7c65a54079e87e9857c5e19902d766b35cf98de1adeee",
+      "loc": 12,
+      "is_script": false,
+      "function_name": "judge_file",
+      "inputs": [
+        "filename",
+        "msg"
+      ],
+      "outputs": [
+        "flag"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/judge_file.py"
+    },
+    {
+      "path": "utilities/elements/manual_seeds_select.m",
+      "sha256": "aed9a2d0b6a17b5d53c00fdac67c23c4fbaf53a1d5cdc839fe45ab16172b487e",
+      "loc": 148,
+      "is_script": false,
+      "function_name": "manual_seeds_select",
+      "inputs": [
+        "m",
+        "Fs",
+        "sz"
+      ],
+      "outputs": [
+        "roi",
+        "sig",
+        "idusef",
+        "bg",
+        "bgf",
+        "datasmthf",
+        "cutofff",
+        "pkcutofff"
+      ],
+      "dependencies": [
+        "utilities/CNMF/init_roi.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/vld_prd_slct.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/manual_seeds_select.py"
+    },
+    {
+      "path": "utilities/elements/merge_roi.m",
+      "sha256": "9236a9f2929c42675fac9d424cddff3e6a0f626f0f3ef50491b0a4f4212e0a87",
+      "loc": 71,
+      "is_script": false,
+      "function_name": "merge_roi",
+      "inputs": [
+        "m",
+        "roi",
+        "sig",
+        "seed",
+        "imax",
+        "datasmthf",
+        "cutofff",
+        "pkcutofff",
+        "ethres"
+      ],
+      "outputs": [
+        "roiout",
+        "sigout",
+        "seedsout",
+        "datasmthf",
+        "cutofff",
+        "pkcutofff"
+      ],
+      "dependencies": [
+        "utilities/elements/merge_unit.m",
+        "utilities/elements/roi_gauss.m",
+        "utilities/elements/sig_sim.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/merge_roi.py"
+    },
+    {
+      "path": "utilities/elements/merge_unit.m",
+      "sha256": "5a942774e27c3b5c94dad90b0418376c52bd714cf22169d4cdf98c3d6ff1ae0f",
+      "loc": 31,
+      "is_script": false,
+      "function_name": "merge_unit",
+      "inputs": [
+        "conmtx",
+        "datasmthf"
+      ],
+      "outputs": [
+        "iduse"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/get_node_name.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/merge_unit.py"
+    },
+    {
+      "path": "utilities/elements/neural_enhance.m",
+      "sha256": "d19106b505c1ba896b86f3f31c5f51b71fb267a8f4ece2ac577ad630025b6592",
+      "loc": 100,
+      "is_script": false,
+      "function_name": "neural_enhance",
+      "inputs": [
+        "m_in",
+        "filename",
+        "Params"
+      ],
+      "outputs": [
+        "m_out",
+        "imaxf",
+        "overwrite_flag",
+        "imx2",
+        "imn2",
+        "ibmean"
+      ],
+      "dependencies": [
+        "utilities/elements/anidenoise.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/bg_remove.m",
+        "utilities/elements/dirt_clean.m",
+        "utilities/elements/judge_file.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/normalize_batch.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/savef.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/neural_enhance.py"
+    },
+    {
+      "path": "utilities/elements/noise_suppress.m",
+      "sha256": "6e7df31491d6e0972c08448a36bd53ef5270492605ba33eb47acf0f21b25a18a",
+      "loc": 94,
+      "is_script": false,
+      "function_name": "noise_suppress",
+      "inputs": [
+        "m_in",
+        "maxall",
+        "Fs",
+        "nflag",
+        "filename"
+      ],
+      "outputs": [
+        "m_out"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/intensity_filter.m",
+        "utilities/elements/judge_file.m",
+        "utilities/elements/normalize_batch.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/trace_clean.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/noise_suppress.py"
+    },
+    {
+      "path": "utilities/elements/norm_inner.m",
+      "sha256": "c88b6b50c720168b113eb41f31ad6dbae51d01ca677abb6beb864c50df607322",
+      "loc": 7,
+      "is_script": false,
+      "function_name": "norm_inner",
+      "inputs": [
+        "a",
+        "b"
+      ],
+      "outputs": [
+        "prod"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/norm_inner.py"
+    },
+    {
+      "path": "utilities/elements/normalize.m",
+      "sha256": "523517a05733ca859dc090ba538d495b43ff3f445bddcdb966410ab425bb2110",
+      "loc": 19,
+      "is_script": false,
+      "function_name": "normalize",
+      "inputs": [
+        "frame_in",
+        "dim"
+      ],
+      "outputs": [
+        "norm_frame"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/normalize.py"
+    },
+    {
+      "path": "utilities/elements/normalize_batch.m",
+      "sha256": "f72d89da01c7f8cb4de2c931cf10822e2cb7f1d01820a37f104bde551972c297",
+      "loc": 20,
+      "is_script": false,
+      "function_name": "normalize_batch",
+      "inputs": [
+        "filename",
+        "var",
+        "imx",
+        "imn",
+        "idbatch",
+        "ip"
+      ],
+      "outputs": [
+        "m"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/normalize_batch.py"
+    },
+    {
+      "path": "utilities/elements/par_init.m",
+      "sha256": "b1216f12aba10033f5dfa13095fd8fe42fce5282421407658e5bec3211a93c53",
+      "loc": 16,
+      "is_script": false,
+      "function_name": "par_init",
+      "inputs": [
+        "m"
+      ],
+      "outputs": [
+        "P",
+        "options"
+      ],
+      "dependencies": [
+        "utilities/CNMF/CNMFSetParms.m",
+        "utilities/CNMF/preprocess_data.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/par_init.py"
+    },
+    {
+      "path": "utilities/elements/parse_type.m",
+      "sha256": "1dca6f6728d540b5384552106d0f0d7bf28cd60bb1ca8a31aa7643d3296289e9",
+      "loc": 14,
+      "is_script": false,
+      "function_name": "parse_type",
+      "inputs": [
+        "ttype"
+      ],
+      "outputs": [
+        "stype"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/parse_type.py"
+    },
+    {
+      "path": "utilities/elements/pix_select.m",
+      "sha256": "b6d9831c8a70ab3b34af3a46a286f0a3fdd355440a6c1e66aa6533ab5d4b94dd",
+      "loc": 317,
+      "is_script": false,
+      "function_name": "pix_select",
+      "inputs": [
+        "m",
+        "mask",
+        "sz",
+        "Fs",
+        "sigthres",
+        "corrthres"
+      ],
+      "outputs": [
+        "roi",
+        "sig",
+        "bg",
+        "bgf",
+        "idusef",
+        "datasmthf",
+        "cutofff",
+        "pkcutofff"
+      ],
+      "dependencies": [
+        "utilities/CNMF/init_roi.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/intensity_filter.m",
+        "utilities/elements/parse_type.m",
+        "utilities/elements/seeds_merge.m",
+        "utilities/elements/vld_prd_slct.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/pix_select.py"
+    },
+    {
+      "path": "utilities/elements/pure_refine_sig.m",
+      "sha256": "2d25c78eda47fad0de4a906ddb2f8a79c2171308ff7ef330fb5d4b816bd35fef",
+      "loc": 12,
+      "is_script": false,
+      "function_name": "pure_refine_sig",
+      "inputs": [
+        "sigfn",
+        "options"
+      ],
+      "outputs": [
+        "sig",
+        "spk"
+      ],
+      "dependencies": [
+        "utilities/CNMF/constrained_foopsi.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/pure_refine_sig.py"
+    },
+    {
+      "path": "utilities/elements/rdp.m",
+      "sha256": "bc4a156f35a3a3ad2d418f243295749f5a14de53c1b07cc082e466f28234089b",
+      "loc": 29,
+      "is_script": false,
+      "function_name": "rdp",
+      "inputs": [
+        "Points",
+        "epsilon"
+      ],
+      "outputs": [
+        "result"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/rdp.py"
+    },
+    {
+      "path": "utilities/elements/refine_roi.m",
+      "sha256": "d587479a918939f451c626ada730336cfbb9c3fa0e4fbd67eb6faced0c68ef8e",
+      "loc": 223,
+      "is_script": false,
+      "function_name": "refine_roi",
+      "inputs": [
+        "m",
+        "C",
+        "f",
+        "Aold",
+        "iduse",
+        "noise",
+        "datasmthf",
+        "cutofff",
+        "pkcutofff",
+        "ispara"
+      ],
+      "outputs": [
+        "A",
+        "C",
+        "iduse",
+        "datasmthf",
+        "cutofff",
+        "pkcutofff"
+      ],
+      "dependencies": [
+        "utilities/CNMF/lars_regression_noise.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/normalize.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/refine_roi.py"
+    },
+    {
+      "path": "utilities/elements/refine_sig.m",
+      "sha256": "6064697c74e5289e2523a5e6dd0de58b910005ea9b0e4d561ba64560d143e544",
+      "loc": 185,
+      "is_script": false,
+      "function_name": "refine_sig",
+      "inputs": [
+        "m",
+        "A",
+        "b",
+        "Cin",
+        "fin",
+        "seeds",
+        "datasmth",
+        "cutoff",
+        "pkcutoff",
+        "p",
+        "options"
+      ],
+      "outputs": [
+        "C",
+        "f",
+        "A",
+        "seeds",
+        "datasmth",
+        "cutoff",
+        "pkcutoff",
+        "Pnew",
+        "S",
+        "YrA"
+      ],
+      "dependencies": [
+        "utilities/CNMF/constrained_foopsi.m",
+        "utilities/CNMF/update_order.m",
+        "utilities/elements/batch_compute.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/refine_sig.py"
+    },
+    {
+      "path": "utilities/elements/refine_sig_old.m",
+      "sha256": "1c250344837c0d932d230a30426346bdf28f09c4590b03c3c40835e9fd8307f0",
+      "loc": 163,
+      "is_script": false,
+      "function_name": "refine_sig",
+      "inputs": [
+        "m",
+        "A",
+        "b",
+        "Cin",
+        "fin",
+        "p",
+        "options"
+      ],
+      "outputs": [
+        "C",
+        "f",
+        "Pnew",
+        "S",
+        "YrA"
+      ],
+      "dependencies": [
+        "utilities/CNMF/constrained_foopsi.m",
+        "utilities/CNMF/update_order.m",
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/refine_sig.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/refine_sig_old.py"
+    },
+    {
+      "path": "utilities/elements/remove_dp.m",
+      "sha256": "1e89622618d8208ce5672fe56d6de37da5fe927fcd4e7bc4b3650ff4943c90f6",
+      "loc": 49,
+      "is_script": false,
+      "function_name": "remove_dp",
+      "inputs": [
+        "m_in",
+        "vname"
+      ],
+      "outputs": [
+        "m_out",
+        "imaxn"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/normalize.m",
+        "utilities/elements/normalize_batch.m",
+        "utilities/elements/parse_type.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/remove_dp.py"
+    },
+    {
+      "path": "utilities/elements/requireR2015b.m",
+      "sha256": "04d56ae6a3dc3f970c6289b806df5cdec22c7fb16c727db28a755b4df5b498d5",
+      "loc": 9,
+      "is_script": false,
+      "function_name": "requireR2015b",
+      "inputs": [],
+      "outputs": [],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/requireR2015b.py"
+    },
+    {
+      "path": "utilities/elements/roi_domain.m",
+      "sha256": "ea400fdbebdb29bb0899d52bcbb52d918affd150d519b3f48bff9a86ff26ee31",
+      "loc": 17,
+      "is_script": false,
+      "function_name": "roi_domain",
+      "inputs": [
+        "frame"
+      ],
+      "outputs": [
+        "mask"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/roi_domain.py"
+    },
+    {
+      "path": "utilities/elements/roi_gauss.m",
+      "sha256": "64434dd38a66085e74fde424fb944f82d8382b38e6d3966e3a9dff52ef6a7356",
+      "loc": 19,
+      "is_script": false,
+      "function_name": "roi_gauss",
+      "inputs": [
+        "roi"
+      ],
+      "outputs": [
+        "roig"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/roi_gauss.py"
+    },
+    {
+      "path": "utilities/elements/savef.m",
+      "sha256": "2b1c72e631931e96d7755cb4fdc2d651c9edb5b78531de2fde741b6bc2dc5cef",
+      "loc": 90,
+      "is_script": false,
+      "function_name": "savef",
+      "inputs": [
+        "filename",
+        "flag",
+        "varargin"
+      ],
+      "outputs": [],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/savef.py"
+    },
+    {
+      "path": "utilities/elements/seeds_merge.m",
+      "sha256": "0726be9a82883d76e7303e921b818c43fc171ccb36669c9dc1d5238b381c8ec2",
+      "loc": 71,
+      "is_script": false,
+      "function_name": "seeds_merge",
+      "inputs": [
+        "imax",
+        "iduse",
+        "datuse",
+        "datasmth",
+        "cutoff",
+        "pkcutoff",
+        "sz",
+        "corrthres"
+      ],
+      "outputs": [
+        "idusef",
+        "datasmthf",
+        "datusef",
+        "cutofff",
+        "pkcutofff"
+      ],
+      "dependencies": [
+        "utilities/elements/seeds_merge_unit.m",
+        "utilities/elements/sig_sim.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/seeds_merge.py"
+    },
+    {
+      "path": "utilities/elements/seeds_merge_unit.m",
+      "sha256": "930307c216ed4656c0159f32a900ec6a55b82cbc09ac12a514816661ced8b82c",
+      "loc": 79,
+      "is_script": false,
+      "function_name": "seeds_merge_unit",
+      "inputs": [
+        "conmtx",
+        "imax",
+        "iduse"
+      ],
+      "outputs": [
+        "iduset"
+      ],
+      "dependencies": [
+        "utilities/elements/graph_cost.m",
+        "utilities/elements/imageGraph.m",
+        "utilities/elements/normalize.m",
+        "utilities/movement_correction/get_node_name.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/seeds_merge_unit.py"
+    },
+    {
+      "path": "utilities/elements/sig_sim.m",
+      "sha256": "df46aae4647ac04c616b1bf8f7f3aa1eb881b923a8451cd474ff4f0af622c609",
+      "loc": 40,
+      "is_script": false,
+      "function_name": "sig_sim",
+      "inputs": [
+        "datasmthf",
+        "cutofff",
+        "pkcutofff",
+        "flag"
+      ],
+      "outputs": [
+        "sigcorfn"
+      ],
+      "dependencies": [
+        "utilities/elements/norm_inner.m",
+        "utilities/elements/vld_prd_slct.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/sig_sim.py"
+    },
+    {
+      "path": "utilities/elements/sigmoid.m",
+      "sha256": "b917aeaa95278d7d1250be805427bc785e37e09c59fa2f5465c25d4064be8fcf",
+      "loc": 3,
+      "is_script": false,
+      "function_name": "sigmoid",
+      "inputs": [
+        "x",
+        "a",
+        "c"
+      ],
+      "outputs": [
+        "y"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/sigmoid.py"
+    },
+    {
+      "path": "utilities/elements/trace_clean.m",
+      "sha256": "36ee53872411a565d2b02e5ffbaaa01a4e4af77f94deefde86644d62a8b397f3",
+      "loc": 92,
+      "is_script": false,
+      "function_name": "trace_clean",
+      "inputs": [
+        "sigin",
+        "Fs",
+        "tflag"
+      ],
+      "outputs": [
+        "sigout"
+      ],
+      "dependencies": [
+        "utilities/elements/rdp.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/trace_clean.py"
+    },
+    {
+      "path": "utilities/elements/vld_prd_slct.m",
+      "sha256": "28346c15c3fe52d68db5d01947887f86371a5a58b273e5af48ea4f6e2799661f",
+      "loc": 74,
+      "is_script": false,
+      "function_name": "vld_prd_slct",
+      "inputs": [
+        "data",
+        "c",
+        "pkc",
+        "pxlthres"
+      ],
+      "outputs": [
+        "pxluse"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/elements/vld_prd_slct.py"
+    },
+    {
+      "path": "utilities/movement_correction/BCH.m",
+      "sha256": "c46df9b3203046919388cd5113b37b0368677fd55de6773b34fd825c5f164612",
+      "loc": 52,
+      "is_script": false,
+      "function_name": "BCH",
+      "inputs": [
+        "velocityField",
+        "updateVelocityField"
+      ],
+      "outputs": [
+        "velocityField"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/jacobian_matrix2d.m",
+        "utilities/movement_correction/lie_bracket.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/BCH.py"
+    },
+    {
+      "path": "utilities/movement_correction/TSP.m",
+      "sha256": "b4c783ea9e910715784287ca8a9476387beb5cf91de08e88270794aeefda2072",
+      "loc": 38,
+      "is_script": false,
+      "function_name": "TSP",
+      "inputs": [
+        "smatrix"
+      ],
+      "outputs": [
+        "scrout",
+        "spath"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/TSP.py"
+    },
+    {
+      "path": "utilities/movement_correction/cen_gen.m",
+      "sha256": "c4c7366484bc1fb0b536573bd2253e8a109cbd1cf97ee798806f243e10dd1f18",
+      "loc": 60,
+      "is_script": false,
+      "function_name": "cen_gen",
+      "inputs": [
+        "Y"
+      ],
+      "outputs": [
+        "p0",
+        "winsize"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/cen_gen.py"
+    },
+    {
+      "path": "utilities/movement_correction/demons_prep.m",
+      "sha256": "c055cc60ab51a796fd34776d95b842b229dc02d9e6517fb79eb5a8ce7382b466",
+      "loc": 18,
+      "is_script": false,
+      "function_name": "demons_prep",
+      "inputs": [
+        "img",
+        "mag",
+        "denom"
+      ],
+      "outputs": [
+        "imout"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/demons_prep.py"
+    },
+    {
+      "path": "utilities/movement_correction/dftregistration.m",
+      "sha256": "977065a5e0d1396954ae3dad0b82ea3bad36abbb305080fc6462dcf3e4fc88cc",
+      "loc": 205,
+      "is_script": false,
+      "function_name": "dftregistration",
+      "inputs": [
+        "buf1ft",
+        "buf2ft",
+        "usfac"
+      ],
+      "outputs": [
+        "output",
+        "Greg"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/dftregistration.py"
+    },
+    {
+      "path": "utilities/movement_correction/dominant_patch.m",
+      "sha256": "72307d03e1f1679c86d2be37ce083f4b7ff90e99eab651263c68b2f8df541606",
+      "loc": 30,
+      "is_script": false,
+      "function_name": "dominant_patch",
+      "inputs": [
+        "Y",
+        "thres"
+      ],
+      "outputs": [
+        "mask"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m",
+        "utilities/movement_correction/demons_prep.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/dominant_patch.py"
+    },
+    {
+      "path": "utilities/movement_correction/feature1_comp.m",
+      "sha256": "58567b8213750288d669d4221f818f458244fd8d39c02c321c48863e09f95b4d",
+      "loc": 26,
+      "is_script": false,
+      "function_name": "feature1_comp",
+      "inputs": [
+        "m",
+        "stt",
+        "stp",
+        "idbatch"
+      ],
+      "outputs": [
+        "mxall",
+        "nfrefs"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/ref_select.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/feature1_comp.py"
+    },
+    {
+      "path": "utilities/movement_correction/feature2_comp.m",
+      "sha256": "5e9fe9924f046129b89c9df70457e9e2403e285bba29f1ec87ddadb5d140fc64",
+      "loc": 39,
+      "is_script": false,
+      "function_name": "feature2_comp",
+      "inputs": [
+        "mxall",
+        "flag",
+        "mag",
+        "denom",
+        "sz"
+      ],
+      "outputs": [
+        "mxpsig"
+      ],
+      "dependencies": [
+        "utilities/elements/anidenoise.m",
+        "utilities/movement_correction/demons_prep.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/feature2_comp.py"
+    },
+    {
+      "path": "utilities/movement_correction/feature_select.m",
+      "sha256": "e77aac558289d091d70ea2142bc8640659599175ae9171d72efdb9956254bb6f",
+      "loc": 17,
+      "is_script": false,
+      "function_name": "feature_select",
+      "inputs": [
+        "mxp"
+      ],
+      "outputs": [
+        "fps"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/feature_select.py"
+    },
+    {
+      "path": "utilities/movement_correction/find_frame.m",
+      "sha256": "461a2782a4b7b9c473631ca55c677853bfc7d61fccef8cd2d63b6fef57351700",
+      "loc": 22,
+      "is_script": false,
+      "function_name": "find_frame",
+      "inputs": [
+        "mxin",
+        "idclustfn",
+        "idin"
+      ],
+      "outputs": [
+        "imref",
+        "imcur"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/find_frame.py"
+    },
+    {
+      "path": "utilities/movement_correction/frame_stab.m",
+      "sha256": "9a8265f60c33b7e18f4cccf0ed26c33f93c4fe5641d593db52d15805fcfa0b6a",
+      "loc": 53,
+      "is_script": false,
+      "function_name": "frame_stab",
+      "inputs": [
+        "m"
+      ],
+      "outputs": [
+        "m"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/parse_type.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/frame_stab.py"
+    },
+    {
+      "path": "utilities/movement_correction/get_node_name.m",
+      "sha256": "ffc126ed1c1368415cb0c15de4c28884d7642e0aa185772c38c0806af810a8f9",
+      "loc": 10,
+      "is_script": false,
+      "function_name": "get_node_name",
+      "inputs": [
+        "ids"
+      ],
+      "outputs": [
+        "names"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/get_node_name.py"
+    },
+    {
+      "path": "utilities/movement_correction/get_trans_score.m",
+      "sha256": "a741c8b528157232e2bab1b2bd1e7d5b766011e2fc6da248bde4d2f7f4581fde",
+      "loc": 93,
+      "is_script": false,
+      "function_name": "get_trans_score",
+      "inputs": [
+        "Y",
+        "flag",
+        "ispara",
+        "isdisp",
+        "mq",
+        "maskc"
+      ],
+      "outputs": [
+        "acorr",
+        "duse"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m",
+        "utilities/movement_correction/klt2.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/get_trans_score.py"
+    },
+    {
+      "path": "utilities/movement_correction/get_trans_score_ref.m",
+      "sha256": "e66753a58daa41c55bcb3cfff27d9d84e53dcd58cd74aa369e04e4c4085a6231",
+      "loc": 40,
+      "is_script": false,
+      "function_name": "get_trans_score_ref",
+      "inputs": [
+        "Y",
+        "imref",
+        "maskc"
+      ],
+      "outputs": [
+        "acorr"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m",
+        "utilities/movement_correction/klt2.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/get_trans_score_ref.py"
+    },
+    {
+      "path": "utilities/movement_correction/gmm_bg.m",
+      "sha256": "ea9373127268d01784f483c5ca124ba5959034980d46c16bdd90eadd583ebd11",
+      "loc": 19,
+      "is_script": false,
+      "function_name": "gmm_bg",
+      "inputs": [
+        "acorr"
+      ],
+      "outputs": [
+        "thres"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/gmm_bg.py"
+    },
+    {
+      "path": "utilities/movement_correction/gradient_fast.m",
+      "sha256": "653306cc1512bb123779a0785d89c4ede8868435069bfbde19660ded0a6463e9",
+      "loc": 13,
+      "is_script": false,
+      "function_name": "gradient_fast",
+      "inputs": [
+        "I"
+      ],
+      "outputs": [
+        "gx",
+        "gy"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/gradient_fast.py"
+    },
+    {
+      "path": "utilities/movement_correction/hier_clust.m",
+      "sha256": "85ca4d73d47150954963b573d72c796b19d7be84e9ef0ce59349b2f141154498",
+      "loc": 124,
+      "is_script": false,
+      "function_name": "hier_clust",
+      "inputs": [
+        "acorr",
+        "Fs",
+        "pixs",
+        "scl",
+        "stype",
+        "m"
+      ],
+      "outputs": [
+        "stt",
+        "stp",
+        "flag",
+        "scl",
+        "mc_flag"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/parse_type.m",
+        "utilities/movement_correction/movement_thres.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/hier_clust.py"
+    },
+    {
+      "path": "utilities/movement_correction/hist_gauss.m",
+      "sha256": "743aed742e782f074222521ce6224dc498249cf11d428de7377ba31061403be9",
+      "loc": 20,
+      "is_script": false,
+      "function_name": "hist_gauss",
+      "inputs": [
+        "sig",
+        "alf"
+      ],
+      "outputs": [
+        "thres",
+        "wid",
+        "jud"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/hist_gauss.py"
+    },
+    {
+      "path": "utilities/movement_correction/iminterpolate.m",
+      "sha256": "a3b43ba4b4312a909e914cb7c4568f3d735a65b55fe9708e4e38a377c178a4f8",
+      "loc": 12,
+      "is_script": false,
+      "function_name": "iminterpolate",
+      "inputs": [
+        "I",
+        "sx",
+        "sy"
+      ],
+      "outputs": [
+        "I"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/iminterpolate.py"
+    },
+    {
+      "path": "utilities/movement_correction/imregdft.m",
+      "sha256": "d7346591093570b624ee9b350ff48bababf8c2a090746ad0f22ec32055faa4e1",
+      "loc": 8,
+      "is_script": false,
+      "function_name": "imregdft",
+      "inputs": [
+        "imref",
+        "imcur"
+      ],
+      "outputs": [
+        "PNt",
+        "imout"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/dftregistration.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/imregdft.py"
+    },
+    {
+      "path": "utilities/movement_correction/inter_section.m",
+      "sha256": "ef43a309c74962c7afebacb3aebb9c3ce6975d31f112ab5c8a19620a61303ec4",
+      "loc": 203,
+      "is_script": false,
+      "function_name": "inter_section",
+      "inputs": [
+        "m",
+        "sttn",
+        "se",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "maskc"
+      ],
+      "outputs": [
+        "m",
+        "xfall",
+        "sxall",
+        "syall"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/parse_type.m",
+        "utilities/movement_correction/iminterpolate.m",
+        "utilities/movement_correction/lk2_warp.m",
+        "utilities/movement_correction/lk_logdemons_unit.m",
+        "utilities/movement_correction/ref_select.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/inter_section.py"
+    },
+    {
+      "path": "utilities/movement_correction/intra_section.m",
+      "sha256": "0f5af5b9fe26d3dc3d25344a4571ef32cadfe1fa7d6aceb62634de0dea7311b4",
+      "loc": 102,
+      "is_script": false,
+      "function_name": "intra_section",
+      "inputs": [
+        "m",
+        "stt",
+        "stp",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "flag",
+        "maskc"
+      ],
+      "outputs": [
+        "m"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/movement_correction/lk_ld_hier.m",
+        "utilities/movement_correction/logdemons_warp_layers.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/intra_section.py"
+    },
+    {
+      "path": "utilities/movement_correction/jacobian_matrix2d.m",
+      "sha256": "fde443d977c6addb0a84a61bf3e1c52c5ac09ef980027b40f1e99c6a76589836",
+      "loc": 33,
+      "is_script": false,
+      "function_name": "jacobian_matrix2d",
+      "inputs": [
+        "vectorField"
+      ],
+      "outputs": [
+        "xdx",
+        "xdy",
+        "ydx",
+        "ydy"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/gradient_fast.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/jacobian_matrix2d.py"
+    },
+    {
+      "path": "utilities/movement_correction/klt2.m",
+      "sha256": "0155672cfa6b01b69a6c8f9792fa4a2aedd7fe92455096883fb04b0c50e11692",
+      "loc": 38,
+      "is_script": false,
+      "function_name": "klt2",
+      "inputs": [
+        "S",
+        "T",
+        "biderr",
+        "mq",
+        "winsize",
+        "oldpoints",
+        "maskc"
+      ],
+      "outputs": [
+        "d",
+        "TPoints",
+        "SInliers",
+        "isFound"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/klt2.py"
+    },
+    {
+      "path": "utilities/movement_correction/klt2_reg.m",
+      "sha256": "7a9d628f2da01265db2b3d640251540db64fcffffb3b29f9213aa8bbbca78857",
+      "loc": 21,
+      "is_script": false,
+      "function_name": "klt2_reg",
+      "inputs": [
+        "imref",
+        "imcur",
+        "flag",
+        "maskc"
+      ],
+      "outputs": [
+        "img",
+        "xform"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/klt2.m",
+        "utilities/movement_correction/klt_geo.m",
+        "utilities/movement_correction/klt_warp.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/klt2_reg.py"
+    },
+    {
+      "path": "utilities/movement_correction/klt_geo.m",
+      "sha256": "7b0b510add32670d25279b8995984e6c93d5f1d6e835eae674678272ac0c65e5",
+      "loc": 28,
+      "is_script": false,
+      "function_name": "klt_geo",
+      "inputs": [
+        "pold",
+        "pcur",
+        "hthres",
+        "flag"
+      ],
+      "outputs": [
+        "inliercur",
+        "inlierold",
+        "xform"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/klt_geo.py"
+    },
+    {
+      "path": "utilities/movement_correction/klt_ref_track.m",
+      "sha256": "993bc17918c7bc097f5c70dd0eb8e687ee1773f6c2d82b6f569cffcb17609aed",
+      "loc": 61,
+      "is_script": false,
+      "function_name": "klt_ref_track",
+      "inputs": [
+        "Y",
+        "imref",
+        "nmaxloop",
+        "maskc"
+      ],
+      "outputs": [
+        "scrout",
+        "imgout",
+        "xformout"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/klt2_reg.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/klt_ref_track.py"
+    },
+    {
+      "path": "utilities/movement_correction/klt_track.m",
+      "sha256": "9dda18550747281c4e0c201082b1bbb013fa20cc744d1d1c7c9627df529b6dcf",
+      "loc": 64,
+      "is_script": false,
+      "function_name": "klt_track",
+      "inputs": [
+        "mxall",
+        "flag"
+      ],
+      "outputs": [
+        "scrout",
+        "imgout",
+        "xformout"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m",
+        "utilities/movement_correction/get_trans_score.m",
+        "utilities/movement_correction/klt2_reg.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/klt_track.py"
+    },
+    {
+      "path": "utilities/movement_correction/klt_warp.m",
+      "sha256": "6936d4b36fce53dd30d1a81cbe068bf2f0095065cff37fb31555055afe6c3aa9",
+      "loc": 6,
+      "is_script": false,
+      "function_name": "klt_warp",
+      "inputs": [
+        "img",
+        "xform"
+      ],
+      "outputs": [
+        "img_warp"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/klt_warp.py"
+    },
+    {
+      "path": "utilities/movement_correction/lie_bracket.m",
+      "sha256": "ba9c2137f0c1b5472d9f6d40b67bee031e83533e2c0b6498e5ee24dedc55c59c",
+      "loc": 46,
+      "is_script": false,
+      "function_name": "lie_bracket",
+      "inputs": [
+        "vectorField",
+        "updateVectorField",
+        "jv",
+        "ju"
+      ],
+      "outputs": [
+        "vectorField"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lie_bracket.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk2_track.m",
+      "sha256": "66d163faef13d5cfaec5bdc449886626fce99776cc36b692e1540e891fc212bd",
+      "loc": 9,
+      "is_script": false,
+      "function_name": "lk2_track",
+      "inputs": [
+        "S",
+        "T",
+        "p0",
+        "winsize"
+      ],
+      "outputs": [
+        "PN",
+        "isFound",
+        "tt"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk2_track.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk2_warp.m",
+      "sha256": "d1d90095108f9ea44b12de6f369e9a553402e86f82fcd1596ba278f4ae9b52c1",
+      "loc": 8,
+      "is_script": false,
+      "function_name": "lk2_warp",
+      "inputs": [
+        "T",
+        "PN",
+        "p0"
+      ],
+      "outputs": [
+        "imgreg"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk2_warp.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_cluster.m",
+      "sha256": "55151a6aa1ba5ccb0af2aa55d2ba6d10e8e72347b8150bf9073c546adb445d19",
+      "loc": 194,
+      "is_script": false,
+      "function_name": "lk_cluster",
+      "inputs": [
+        "mxin",
+        "pixs",
+        "scl",
+        "maskc"
+      ],
+      "outputs": [
+        "mxout",
+        "xfuse",
+        "iduse",
+        "smatrix",
+        "xfmatrix"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/get_node_name.m",
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/lk_combine_layers.m",
+        "utilities/movement_correction/lk_ref_track.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_cluster.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_combine_layers.m",
+      "sha256": "7df62754094fd4053a4662f63f6141ee8bcddd8c2b80131d624bb01170123943",
+      "loc": 42,
+      "is_script": false,
+      "function_name": "lk_combine_layers",
+      "inputs": [
+        "xfcomb",
+        "idcomb"
+      ],
+      "outputs": [
+        "xffn",
+        "idfn"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_combine_layers.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_ld_hier.m",
+      "sha256": "43e83129bff2a2760a628c234867cbdc260ee81dd08edba817adbf76be3c49cf",
+      "loc": 104,
+      "is_script": false,
+      "function_name": "lk_ld_hier",
+      "inputs": [
+        "mxall",
+        "mxalla",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "sclld",
+        "maskc"
+      ],
+      "outputs": [
+        "mxfn",
+        "xff",
+        "ldf",
+        "idf"
+      ],
+      "dependencies": [
+        "utilities/elements/normalize.m",
+        "utilities/movement_correction/lk_cluster.m",
+        "utilities/movement_correction/lk_combine_layers.m",
+        "utilities/movement_correction/lk_loop.m",
+        "utilities/movement_correction/lk_warp_layers.m",
+        "utilities/movement_correction/logdemons_cluster.m",
+        "utilities/movement_correction/logdemons_combine_layers.m",
+        "utilities/movement_correction/logdemons_loop.m",
+        "utilities/movement_correction/logdemons_warp_layers.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_ld_hier.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_logdemons_unit.m",
+      "sha256": "709ccedad8d14f321117c7f70ff3304a0141c3b05cd0820b42294bf157f1d6c1",
+      "loc": 135,
+      "is_script": false,
+      "function_name": "lk_logdemons_unit",
+      "inputs": [
+        "tmp",
+        "se",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "flag",
+        "maskc"
+      ],
+      "outputs": [
+        "tmp",
+        "xff",
+        "sxx",
+        "syy"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/feature2_comp.m",
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/iminterpolate.m",
+        "utilities/movement_correction/lk2_warp.m",
+        "utilities/movement_correction/lk_ref_track.m",
+        "utilities/movement_correction/logdemons_unit.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_logdemons_unit.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_loop.m",
+      "sha256": "73413984fc21265f2d7c815cdcaab976c8cbd679281c6a68da4329141cd8dce2",
+      "loc": 233,
+      "is_script": false,
+      "function_name": "lk_loop",
+      "inputs": [
+        "mxin",
+        "pixs",
+        "scl",
+        "maskc"
+      ],
+      "outputs": [
+        "mxout",
+        "xfuse",
+        "iduse"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/find_frame.m",
+        "utilities/movement_correction/get_node_name.m",
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/lk_combine_layers.m",
+        "utilities/movement_correction/lk_ref_track.m",
+        "utilities/movement_correction/temporary_warp.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_loop.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_ref_track.m",
+      "sha256": "38d8951d698c493afeb7801087d98beb574e43c1e397c79f758365b364de5cbe",
+      "loc": 44,
+      "is_script": false,
+      "function_name": "lk_ref_track",
+      "inputs": [
+        "Y",
+        "imref",
+        "maskc"
+      ],
+      "outputs": [
+        "PN",
+        "imgo",
+        "scr"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/cen_gen.m",
+        "utilities/movement_correction/feature2_comp.m",
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/imregdft.m",
+        "utilities/movement_correction/lk2_track.m",
+        "utilities/movement_correction/lk2_warp.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_ref_track.py"
+    },
+    {
+      "path": "utilities/movement_correction/lk_warp_layers.m",
+      "sha256": "41dc36157411d1e8a761b7bd1ac905dd19cd76096da84eedecd08c895d6ee8a7",
+      "loc": 21,
+      "is_script": false,
+      "function_name": "lk_warp_layers",
+      "inputs": [
+        "mxin",
+        "xffn"
+      ],
+      "outputs": [
+        "mxout"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/klt_warp.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/lk_warp_layers.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons.m",
+      "sha256": "a19fa7b39da03ce7724cd7b4130e6144f5376bb5890a6010d6e00db62eff4b0c",
+      "loc": 336,
+      "is_script": false,
+      "function_name": "logdemons",
+      "inputs": [
+        "F",
+        "M",
+        "isgpu",
+        "nlevel",
+        "sigma_x",
+        "sigma_fluid",
+        "sigma_diffusion"
+      ],
+      "outputs": [
+        "Mp",
+        "sx",
+        "sy"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/BCH.m",
+        "utilities/movement_correction/gradient_fast.m",
+        "utilities/movement_correction/iminterpolate.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons_cluster.m",
+      "sha256": "6c331d9bd274b0b3d13774a66ed6e2f62e07dd2accc39af1d0e9db6a51d5d51e",
+      "loc": 291,
+      "is_script": false,
+      "function_name": "logdemons_cluster",
+      "inputs": [
+        "mxin",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "maskc"
+      ],
+      "outputs": [
+        "mxout",
+        "xfuse",
+        "lduse",
+        "iduse",
+        "smatrix",
+        "xfmatrix",
+        "ldmatrix"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/TSP.m",
+        "utilities/movement_correction/get_node_name.m",
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/iminterpolate.m",
+        "utilities/movement_correction/klt_ref_track.m",
+        "utilities/movement_correction/klt_warp.m",
+        "utilities/movement_correction/logdemons_combine_layers.m",
+        "utilities/movement_correction/logdemons_unit.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons_cluster.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons_combine_layers.m",
+      "sha256": "fdd3f49565330e10d42606fb51f6bfeec7642d1a49546f00d883ed3791b8c760",
+      "loc": 46,
+      "is_script": false,
+      "function_name": "logdemons_combine_layers",
+      "inputs": [
+        "xfcomb",
+        "ldcomb",
+        "idcomb"
+      ],
+      "outputs": [
+        "xffn",
+        "ldfn",
+        "idfn"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons_combine_layers.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons_loop.m",
+      "sha256": "3a7efcb20618ec40b215a07f4eae67912a95ad775dfdc3fc48dca4b12bf0ec5f",
+      "loc": 233,
+      "is_script": false,
+      "function_name": "logdemons_loop",
+      "inputs": [
+        "mxin",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "maskc"
+      ],
+      "outputs": [
+        "mxout",
+        "xfuse",
+        "lduse",
+        "iduse"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/get_node_name.m",
+        "utilities/movement_correction/get_trans_score_ref.m",
+        "utilities/movement_correction/klt_ref_track.m",
+        "utilities/movement_correction/logdemons_combine_layers.m",
+        "utilities/movement_correction/logdemons_unit.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons_loop.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons_unit.m",
+      "sha256": "85032fc875cb2053e56ea4b67828f05de3c5938b7621b12ca204e76b94a4a654",
+      "loc": 92,
+      "is_script": false,
+      "function_name": "logdemons_unit",
+      "inputs": [
+        "imref",
+        "imcur",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "maskc"
+      ],
+      "outputs": [
+        "imgo",
+        "sxfn",
+        "syfn"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/get_trans_score.m",
+        "utilities/movement_correction/logdemons.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons_unit.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons_warp.m",
+      "sha256": "ba03306c8a72c25116e55ee0567e987fa1a93cc57c86d803b4f2f6e3b216dcc3",
+      "loc": 12,
+      "is_script": false,
+      "function_name": "logdemons_warp",
+      "inputs": [
+        "m",
+        "sxt",
+        "syt",
+        "sttnni",
+        "stpnni"
+      ],
+      "outputs": [],
+      "dependencies": [
+        "utilities/movement_correction/iminterpolate.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons_warp.py"
+    },
+    {
+      "path": "utilities/movement_correction/logdemons_warp_layers.m",
+      "sha256": "726f9a3f4c649811eb807f8d2066db33f2357f813edfc2f456967d81629115fe",
+      "loc": 28,
+      "is_script": false,
+      "function_name": "logdemons_warp_layers",
+      "inputs": [
+        "mxin",
+        "xffn",
+        "ldfn"
+      ],
+      "outputs": [
+        "mxout"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/iminterpolate.m",
+        "utilities/movement_correction/klt_warp.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/logdemons_warp_layers.py"
+    },
+    {
+      "path": "utilities/movement_correction/movement_thres.m",
+      "sha256": "1b2f147211c4dd4c221e558b1bf99c5d4f3cf8eafd8153dbd04393a92f3eae64",
+      "loc": 14,
+      "is_script": false,
+      "function_name": "movement_thres",
+      "inputs": [
+        "acorr"
+      ],
+      "outputs": [
+        "thres"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/movement_thres.py"
+    },
+    {
+      "path": "utilities/movement_correction/nonstable_range.m",
+      "sha256": "6192e02ab1dd365218424897e09ca1bbcdcdfbb57e436b930cf40f0d3fb7533d",
+      "loc": 22,
+      "is_script": false,
+      "function_name": "nonstable_range",
+      "inputs": [
+        "sttn",
+        "stpn",
+        "nf"
+      ],
+      "outputs": [
+        "bstt",
+        "bstp"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/nonstable_range.py"
+    },
+    {
+      "path": "utilities/movement_correction/nonstable_section.m",
+      "sha256": "4d524d7eceeab71446e90ce0f603240541ee3f3976b5f6803364004c042d87ca",
+      "loc": 151,
+      "is_script": false,
+      "function_name": "nonstable_section",
+      "inputs": [
+        "m",
+        "sttn",
+        "stpn",
+        "se",
+        "pixs",
+        "scl",
+        "sigma_x",
+        "sigma_f",
+        "sigma_d",
+        "maskc"
+      ],
+      "outputs": [
+        "m"
+      ],
+      "dependencies": [
+        "utilities/elements/batch_compute.m",
+        "utilities/elements/norm_inner.m",
+        "utilities/elements/parse_type.m",
+        "utilities/movement_correction/lk_logdemons_unit.m",
+        "utilities/movement_correction/nonstable_range.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/nonstable_section.py"
+    },
+    {
+      "path": "utilities/movement_correction/ref_select.m",
+      "sha256": "15e821fa79d167088d18c8509c130e9f216c7460043355971ec897dc08287858",
+      "loc": 43,
+      "is_script": false,
+      "function_name": "ref_select",
+      "inputs": [
+        "Y",
+        "nfcomp"
+      ],
+      "outputs": [
+        "ref",
+        "nfref"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/ref_select.py"
+    },
+    {
+      "path": "utilities/movement_correction/section_update.m",
+      "sha256": "63972d3f10076fc1307b8840b76732c1fbfa359ee879cc958a1983ea750cc63a",
+      "loc": 31,
+      "is_script": false,
+      "function_name": "section_update",
+      "inputs": [
+        "stt",
+        "stp",
+        "nf"
+      ],
+      "outputs": [
+        "sttn",
+        "stpn"
+      ],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/section_update.py"
+    },
+    {
+      "path": "utilities/movement_correction/select_gpu.m",
+      "sha256": "593e8a4111c99d2b02bf8cdc0c714d0ea9f3e5ba13878b77674ac1be0c9762c8",
+      "loc": 20,
+      "is_script": false,
+      "function_name": "select_gpu",
+      "inputs": [],
+      "outputs": [],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/select_gpu.py"
+    },
+    {
+      "path": "utilities/movement_correction/temporary_warp.m",
+      "sha256": "b19daf0ce3bb7d553eb876691b9daf2c8a22029ee2821d7ce9d71d1e50bbad39",
+      "loc": 25,
+      "is_script": false,
+      "function_name": "temporary_warp",
+      "inputs": [
+        "xfallfn",
+        "idclustfn",
+        "mxintt"
+      ],
+      "outputs": [
+        "mxout"
+      ],
+      "dependencies": [
+        "utilities/movement_correction/lk_combine_layers.m",
+        "utilities/movement_correction/lk_warp_layers.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/movement_correction/temporary_warp.py"
+    },
+    {
+      "path": "utilities/postprocess/mouseClick.m",
+      "sha256": "8494b4f38f46b07406acaf6243c5bd8e042df8d34d9200df32700d99d4593efb",
+      "loc": 76,
+      "is_script": false,
+      "function_name": "mouseClick",
+      "inputs": [
+        "~",
+        "~",
+        "tp",
+        "seeds",
+        "all_neuron_roi",
+        "roi",
+        "sroi",
+        "hroi",
+        "hsroi",
+        "h",
+        "posf",
+        "posroi",
+        "possroi",
+        "i",
+        "nn",
+        "nr",
+        "pixh",
+        "pixw"
+      ],
+      "outputs": [],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/postprocess/mouseClick.py"
+    },
+    {
+      "path": "utilities/postprocess/mouseMove.m",
+      "sha256": "8038a83f221dec46cfc114ae3f583d2afe2aaafb045a0c298a9df00020de3b58",
+      "loc": 112,
+      "is_script": false,
+      "function_name": "mouseMove",
+      "inputs": [
+        "~",
+        "~",
+        "tp",
+        "all_wave_det",
+        "all_neuron_roi",
+        "roi",
+        "sroi",
+        "hroi",
+        "hroi_wave",
+        "h",
+        "posf",
+        "posroi",
+        "i",
+        "nn",
+        "nr",
+        "pixh",
+        "pixw"
+      ],
+      "outputs": [],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/postprocess/mouseMove.py"
+    },
+    {
+      "path": "utilities/postprocess/plot_contour.m",
+      "sha256": "2b21f2b346279d529b93d011727a9794c6dbe3d8c67dc0e8812759e9503b67f1",
+      "loc": 28,
+      "is_script": false,
+      "function_name": "plot_contour",
+      "inputs": [
+        "roifn",
+        "sigfn",
+        "seedsfn",
+        "imax",
+        "pixh",
+        "pixw"
+      ],
+      "outputs": [],
+      "dependencies": [],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/postprocess/plot_contour.py"
+    },
+    {
+      "path": "utilities/postprocess/real_neuron_select.m",
+      "sha256": "635a94d48b8581c5827759f1a61374c37a6ec0acedf63a78ebe4a2c518440bed",
+      "loc": 130,
+      "is_script": false,
+      "function_name": "real_neuron_select",
+      "inputs": [],
+      "outputs": [],
+      "dependencies": [
+        "utilities/elements/normalize.m",
+        "utilities/postprocess/mouseClick.m",
+        "utilities/postprocess/mouseMove.m"
+      ],
+      "python_path": "src/min1pipe/matlab_mirror/utilities/postprocess/real_neuron_select.py"
+    }
+  ]
+}
