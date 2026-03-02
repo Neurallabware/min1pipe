@@ -1,0 +1,32 @@
+{
+  "video_path": "/home/yz/MIN1PIPE/demo/demo_data.tif",
+  "params": {
+    "Fsi": 20.0,
+    "Fsi_new": 20.0,
+    "spatialr": 1.0,
+    "neuron_size": 5,
+    "ismc": true,
+    "flag": 1,
+    "anidenoise_iter": 4,
+    "anidenoise_dt": 0.14285714285714285,
+    "anidenoise_kappa": 0.5,
+    "anidenoise_opt": 1,
+    "pix_select_sigthres": 0.8,
+    "pix_select_corrthres": 0.6,
+    "merge_roi_corrthres": 0.9,
+    "refine_roi_ispara": false,
+    "seed_random_iters": 50,
+    "seed_max_per_iter": 500,
+    "seed_gmm_prob_thres": 0.5,
+    "max_seeds": 80,
+    "seed_intensity_scale": 1.0,
+    "trace_clean_tflag": 2,
+    "rnn_model_path": null
+  },
+  "stages": [
+    "motion_correction",
+    "source_detection",
+    "component_filtering",
+    "calcium_deconvolution"
+  ]
+}

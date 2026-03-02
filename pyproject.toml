@@ -19,7 +19,8 @@ dependencies = [
   "matplotlib>=3.7",
   "imageio>=2.31",
   "tifffile>=2023.0",
-  "networkx>=3.0"
+  "networkx>=3.0",
+  "PyWavelets>=1.6"
 ]
 
 [project.optional-dependencies]

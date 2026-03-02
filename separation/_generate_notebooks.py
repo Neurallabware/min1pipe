@@ -155,7 +155,10 @@ if SEP_DIR.name != "separation":
 
 sys.path.insert(0, str(SEP_DIR))
 REPO_ROOT = SEP_DIR.parent
+sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "src"))
 TEST_DATA = SEP_DIR / "_test_data"
+TEST_DATA_STRICT = SEP_DIR / "_test_data_strict"
 print(f"Separation dir: {SEP_DIR}")
 print(f"Repo root: {REPO_ROOT}")
 '''
@@ -689,254 +692,134 @@ def gen_nb4():
 def gen_nb5():
     cells = [
         make_cell(dedent("""\
-            # Full Pipeline Integration — Chained Module Validation
+            # Full Pipeline Integration — Strict MATLAB-Alignment
 
-            This notebook chains all 4 standalone modules sequentially on demo data,
-            produces the full 2×3 visualization panel (matching the repo's demo output),
-            and compares final results with the original pipeline.
+            This notebook runs the strict `separation` pipeline and validates each stage against
+            strict fixtures generated from the same pipeline contract.
 
-            **Chain:** motion_correction → source_detection → component_filtering → calcium_deconvolution"""), "markdown"),
-
+            **Stage chain:** neural_enhancement → movement_correction → seeds-cleansed source extraction → component filtering/background update → deconvolution"""), "markdown"),
         make_cell("## 1. Setup & Imports", "markdown"),
         make_cell(SETUP_PATH),
         make_cell(VIS_HELPERS),
-
-        make_cell("## 2. Load Pipeline Configuration & Reference", "markdown"),
         make_cell(dedent("""\
-            with open(TEST_DATA / "pipeline_config.pkl", "rb") as f:
-                config = pickle.load(f)
+            from _shared.params import strict_default_parameters
+            from _shared.fixtures import load_npz
+            from pipeline_strict import run_full_pipeline_strict
 
-            # Load all module reference outputs for per-stage comparison
+            video_path = REPO_ROOT / "demo" / "demo_data.tif"
+            strict_dir = TEST_DATA_STRICT
+            print(f"Video path: {video_path}")
+            print(f"Strict fixture root: {strict_dir}")""")),
+        make_cell("## 2. Load Strict Fixture References", "markdown"),
+        make_cell(dedent("""\
             refs = {}
             for mod in ["motion_correction", "source_detection", "component_filtering", "calcium_deconvolution"]:
-                with open(TEST_DATA / mod / "test_output.pkl", "rb") as f:
-                    refs[mod] = pickle.load(f)
-
-            print("Pipeline config:")
-            print(f"  Video: {config['video_path']}")
-            print(f"  Module order: {config['module_order']}")
-            print(f"  Params: {config['params']}")""")),
-
-        make_cell("## 3. Run Full Pipeline (Chained Modules)", "markdown"),
-
+                p = strict_dir / mod / "output.npz"
+                if not p.exists():
+                    raise FileNotFoundError(f"Missing strict fixture: {p}. Run `python separation/build_strict_fixtures.py` first.")
+                refs[mod] = load_npz(p)
+            print("Loaded strict fixtures for all stages.")""")),
+        make_cell("## 3. Run Strict Pipeline", "markdown"),
         make_cell(dedent("""\
-            # ── Stage 1: Motion Correction ──
-            from motion_correction import run_motion_correction
-
-            params = config["params"]
-            mc_result = run_motion_correction(
-                video_path=config["video_path"],
-                params={"Fsi": params["Fsi"], "Fsi_new": params["Fsi_new"],
-                        "spatialr": params["spatialr"], "neuron_size": params["neuron_size"],
-                        "use_mc": True},
-            )
-            print(f"[1/4] Motion Correction: {mc_result.corrected_video.shape}")""")),
-
+            params = strict_default_parameters()
+            result = run_full_pipeline_strict(video_path=video_path, params=params)
+            mc_result = result.motion
+            sd_result = result.source
+            cf_result = result.component
+            cd_result = result.deconv
+            print(f"Motion corrected video: {mc_result.corrected_video.shape}")
+            print(f"Detected components: {sd_result.n_components}")
+            print(f"Filtered ROI/signal: {cf_result.roifn.shape} / {cf_result.sigfn.shape}")
+            print(f"Deconv outputs: spk={cd_result.spkfn.shape}, dff={cd_result.dff.shape}")""")),
+        make_cell("## 4. Stage-by-Stage Numeric Validation", "markdown"),
         make_cell(dedent("""\
-            # ── Stage 2: Source Detection ──
-            from source_detection import run_source_detection
-
-            sd_result = run_source_detection(
-                corrected_video=mc_result.corrected_video,
-                imax=mc_result.imax,
-                params={"neuron_size": params["neuron_size"], "max_seeds": 80},
-            )
-            print(f"[2/4] Source Detection: {sd_result.n_components} components")""")),
-
-        make_cell(dedent("""\
-            # ── Stage 3: Component Filtering ──
-            from component_filtering import run_component_filtering
-
-            cf_result = run_component_filtering(
-                roifn=sd_result.roifn,
-                sigfn=sd_result.sigfn,
-                seedsfn=sd_result.seedsfn,
-                corrected_video=mc_result.corrected_video,
-                params={"neuron_size": params["neuron_size"], "merge_corrthres": 0.9},
-            )
-            print(f"[3/4] Component Filtering: roifn={cf_result.roifn.shape} sigfn={cf_result.sigfn.shape}")""")),
-
-        make_cell(dedent("""\
-            # ── Stage 4: Calcium Deconvolution ──
-            from calcium_deconvolution import run_calcium_deconvolution
-
-            cd_result = run_calcium_deconvolution(
-                sigfn=cf_result.sigfn,
-                params={"method": "simple_diff"},
-            )
-            print(f"[4/4] Calcium Deconvolution: spkfn={cd_result.spkfn.shape} dff={cd_result.dff.shape}")""")),
-
-        make_cell("## 4. Per-Stage Numerical Comparison", "markdown"),
-        make_cell(dedent("""\
-            print("=" * 70)
-            print("PER-STAGE NUMERICAL COMPARISON vs ORIGINAL PIPELINE")
-            print("=" * 70)
-
             stage_results = {}
 
-            # Stage 1
-            print("\\n── Stage 1: Motion Correction ──")
+            print("\\n[Stage 1] motion_correction")
             s1 = True
-            s1 &= similarity_report("corrected_video", mc_result.corrected_video, refs["motion_correction"]["corrected_video"])
-            s1 &= similarity_report("imax", mc_result.imax, refs["motion_correction"]["imax"])
-            s1 &= similarity_report("raw_score", mc_result.raw_score, refs["motion_correction"]["raw_score"])
-            s1 &= similarity_report("corr_score", mc_result.corr_score, refs["motion_correction"]["corr_score"])
+            s1 &= similarity_report("corrected_video", mc_result.corrected_video, refs["motion_correction"]["corrected_video"], rtol=1e-4, atol=1e-6)
+            s1 &= similarity_report("imax", mc_result.imax, refs["motion_correction"]["imax"], rtol=1e-4, atol=1e-6)
+            s1 &= similarity_report("raw_score", mc_result.raw_score, refs["motion_correction"]["raw_score"], rtol=1e-4, atol=1e-6)
+            s1 &= similarity_report("corr_score", mc_result.corr_score, refs["motion_correction"]["corr_score"], rtol=1e-4, atol=1e-6)
             stage_results["motion_correction"] = s1
 
-            # Stage 2
-            print("\\n── Stage 2: Source Detection ──")
+            print("\\n[Stage 2] source_detection")
             s2 = True
-            s2 &= similarity_report("roifn", sd_result.roifn, refs["source_detection"]["roifn"])
-            s2 &= similarity_report("sigfn", sd_result.sigfn, refs["source_detection"]["sigfn"])
-            s2 &= similarity_report("seedsfn", sd_result.seedsfn, refs["source_detection"]["seedsfn"])
+            s2 &= similarity_report("roifn", sd_result.roifn, refs["source_detection"]["roifn"], rtol=1e-4, atol=1e-6)
+            s2 &= similarity_report("sigfn", sd_result.sigfn, refs["source_detection"]["sigfn"], rtol=1e-4, atol=1e-6)
+            s2 &= similarity_report("seedsfn", sd_result.seedsfn, refs["source_detection"]["seedsfn"], rtol=1e-5, atol=1e-7)
             stage_results["source_detection"] = s2
 
-            # Stage 3
-            print("\\n── Stage 3: Component Filtering ──")
+            print("\\n[Stage 3] component_filtering")
             s3 = True
-            s3 &= similarity_report("roifn", cf_result.roifn, refs["component_filtering"]["roifn"])
-            s3 &= similarity_report("sigfn", cf_result.sigfn, refs["component_filtering"]["sigfn"])
+            s3 &= similarity_report("roifn", cf_result.roifn, refs["component_filtering"]["roifn"], rtol=1e-4, atol=1e-6)
+            s3 &= similarity_report("sigfn", cf_result.sigfn, refs["component_filtering"]["sigfn"], rtol=1e-4, atol=1e-6)
+            s3 &= similarity_report("bgfn", cf_result.bgfn, refs["component_filtering"]["bgfn"], rtol=1e-4, atol=1e-6)
+            s3 &= similarity_report("bgffn", cf_result.bgffn, refs["component_filtering"]["bgffn"], rtol=1e-4, atol=1e-6)
             stage_results["component_filtering"] = s3
 
-            # Stage 4
-            print("\\n── Stage 4: Calcium Deconvolution ──")
+            print("\\n[Stage 4] calcium_deconvolution")
             s4 = True
-            s4 &= similarity_report("spkfn", cd_result.spkfn, refs["calcium_deconvolution"]["spkfn"])
-            s4 &= similarity_report("dff", cd_result.dff, refs["calcium_deconvolution"]["dff"])
+            s4 &= similarity_report("spkfn", cd_result.spkfn, refs["calcium_deconvolution"]["spkfn"], rtol=1e-4, atol=1e-6)
+            s4 &= similarity_report("dff", cd_result.dff, refs["calcium_deconvolution"]["dff"], rtol=1e-4, atol=1e-6)
             stage_results["calcium_deconvolution"] = s4""")),
-
-        make_cell("## 5. Full 2×3 Visualization Panel (Repo-Style Demo Output)", "markdown"),
+        make_cell("## 5. MATLAB-Style 2x3 Panel", "markdown"),
         make_cell(dedent("""\
-            # Reproduce the exact 2x3 panel from demo_min1pipe.m / render_demo_visualization()
             fig = plt.figure(figsize=(12.8, 9.0))
 
-            # Panel 1: Raw (imaxn)
             ax1 = fig.add_subplot(2, 3, 1)
             ax1.imshow(mc_result.imaxn, cmap="viridis", origin="upper", interpolation="nearest")
-            ax1.set_title("Raw")
+            ax1.set_title("Raw (demo_min1pipe.m)")
             ax1.set_box_aspect(1)
 
-            # Panel 2: Before MC (imaxy)
             ax2 = fig.add_subplot(2, 3, 2)
-            ax2.imshow(mc_result.imaxy, cmap="viridis", origin="upper", interpolation="nearest")
-            ax2.set_title("Before MC")
+            ax2.imshow(mc_result.imaxy_pre, cmap="viridis", origin="upper", interpolation="nearest")
+            ax2.set_title("Before MC (demo_min1pipe.m)")
             ax2.set_box_aspect(1)
 
-            # Panel 3: After MC (imax)
             ax3 = fig.add_subplot(2, 3, 3)
             ax3.imshow(mc_result.imax, cmap="viridis", origin="upper", interpolation="nearest")
-            ax3.set_title("After MC")
+            ax3.set_title("After MC (demo_min1pipe.m)")
             ax3.set_box_aspect(1)
 
-            # Panel 4: Neural Contours
             ax4 = fig.add_subplot(2, 3, 4)
-            plt.sca(ax4)
-            plot_contour_standalone(cf_result.roifn, cf_result.sigfn, cf_result.seedsfn,
-                                   mc_result.imax, mc_result.pixh, mc_result.pixw, ax=ax4)
+            plot_contour_standalone(cf_result.roifn, cf_result.sigfn, cf_result.seedsfn, mc_result.imax, mc_result.pixh, mc_result.pixw, ax=ax4)
+            ax4.set_title("Neural Contours (plot_contour.m)")
             ax4.set_box_aspect(1)
 
-            # Panel 5: MC Scores
             ax5 = fig.add_subplot(2, 3, 5)
-            plot_mc_scores(mc_result.raw_score, mc_result.corr_score, ax=ax5)
+            plot_mc_scores(mc_result.raw_score, mc_result.corr_score, ax=ax5, title="MC Scores (demo_min1pipe.m)")
             ax5.set_box_aspect(1)
 
-            # Panel 6: Traces
             ax6 = fig.add_subplot(2, 3, 6)
-            plot_traces(cf_result.sigfn, ax=ax6)
+            plot_traces(cf_result.sigfn, ax=ax6, title="Traces (demo_min1pipe.m)")
             ax6.set_box_aspect(1)
 
-            fig.suptitle("Full Pipeline Output (Chained Standalone Modules)", fontsize=14, y=1.01)
+            fig.suptitle("MIN1PIPE Strict Separation Output", fontsize=14, y=1.01)
             fig.tight_layout()
             plt.show()""")),
-
-        make_cell("## 6. Visualization: Spike Trains & dF/F", "markdown"),
-        make_cell(dedent("""\
-            fig, axes = plt.subplots(1, 2, figsize=(14, 5))
-            plot_traces(cd_result.spkfn, ax=axes[0], title="Inferred Spike Trains")
-            plot_traces(cd_result.dff, ax=axes[1], title="dF/F Normalized Traces")
-            plt.tight_layout()
-            plt.show()""")),
-
-        make_cell("## 7. Comparison with MATLAB Golden Reference (if available)", "markdown"),
+        make_cell("## 6. Optional MATLAB Golden Comparison", "markdown"),
         make_cell(dedent("""\
             matlab_ref = REPO_ROOT / "artifacts" / "golden" / "matlab" / "demo_data" / "latest" / "demo_data_data_processed.mat"
             if matlab_ref.exists():
-                import h5py
-                print("MATLAB golden reference found. Loading...")
-                with h5py.File(matlab_ref, "r") as f:
-                    matlab_imax = np.asarray(f["imax"]).T  # transpose MATLAB→Python
-                    matlab_roifn = np.asarray(f["roifn"]).T
-                    matlab_sigfn = np.asarray(f["sigfn"]).T
-                    matlab_spkfn = np.asarray(f["spkfn"]).T
-                    matlab_dff = np.asarray(f["dff"]).T
-                    matlab_pixh = int(np.asarray(f["pixh"]).flat[0])
-                    matlab_pixw = int(np.asarray(f["pixw"]).flat[0])
-
-                print(f"  MATLAB imax: {matlab_imax.shape}")
-                print(f"  MATLAB roifn: {matlab_roifn.shape} ({matlab_roifn.shape[1]} ROIs)")
-                print(f"  MATLAB sigfn: {matlab_sigfn.shape}")
-                print(f"  MATLAB spkfn: {matlab_spkfn.shape}")
-                print(f"  MATLAB dimensions: {matlab_pixh}x{matlab_pixw}")
-
-                # Note: shapes may differ (MATLAB uses full pipeline, Python uses simplified)
-                print(f"\\n  Python imax: {mc_result.imax.shape}")
-                print(f"  Python roifn: {cf_result.roifn.shape} ({cf_result.roifn.shape[1]} ROIs)")
-                print(f"  Python sigfn: {cf_result.sigfn.shape}")
-                print(f"  Python dimensions: {mc_result.pixh}x{mc_result.pixw}")
-
-                if matlab_imax.shape == mc_result.imax.shape:
-                    print("\\n── Spatial projection comparison ──")
-                    similarity_report("imax (vs MATLAB)", mc_result.imax, matlab_imax, rtol=0.1, atol=0.05)
-                    plot_comparison_images(mc_result.imax, matlab_imax,
-                                          "Python Pipeline", "MATLAB Golden",
-                                          suptitle="imax: Python Standalone vs MATLAB Reference")
+                from min1pipe.io import load_processed_mat
+                mat = load_processed_mat(matlab_ref, source_layout="matlab")
+                print("MATLAB golden artifact found.")
+                print(f"  MATLAB imax shape: {mat['imax'].shape}")
+                print(f"  Python imax shape: {mc_result.imax.shape}")
+                if mat["imax"].shape == mc_result.imax.shape:
+                    similarity_report("imax vs MATLAB", mc_result.imax, mat["imax"], rtol=5e-2, atol=1e-2)
                 else:
-                    _sr = params['spatialr']
-                    print(f"\\n  Shape mismatch (Python uses spatialr={_sr}, "
-                          f"different params). Visual comparison of MATLAB 2x3 panel:")
-                    # Show MATLAB reference visualization
-                    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
-                    axes[0].imshow(mc_result.imax, cmap="viridis", origin="upper", interpolation="nearest")
-                    axes[0].set_title(f"Python ({mc_result.pixh}x{mc_result.pixw})")
-                    axes[0].set_aspect("equal")
-                    axes[1].imshow(matlab_imax, cmap="viridis", origin="upper", interpolation="nearest")
-                    axes[1].set_title(f"MATLAB ({matlab_pixh}x{matlab_pixw})")
-                    axes[1].set_aspect("equal")
-                    plt.suptitle("Max Projection Comparison", fontsize=13)
-                    plt.tight_layout()
-                    plt.show()
+                    print("  Shape mismatch is expected if params differ.")
             else:
-                print("MATLAB golden reference not found. Skipping cross-reference comparison.")""")),
-
-        make_cell("## 8. Overall Results Summary", "markdown"),
+                print("MATLAB golden artifact not found; skipping cross-check.")""")),
+        make_cell("## 7. Summary", "markdown"),
         make_cell(dedent("""\
-            print("=" * 70)
-            print("FULL PIPELINE INTEGRATION — VALIDATION REPORT")
-            print("=" * 70)
-            print(f"\\n  Video source: {config['video_path']}")
-            print(f"  Parameters: Fsi={params['Fsi']}, Fsi_new={params['Fsi_new']}, "
-                  f"spatialr={params['spatialr']}, neuron_size={params['neuron_size']}")
-            print(f"\\n  Pipeline Output:")
-            print(f"    Corrected video: {mc_result.corrected_video.shape}")
-            print(f"    Detected neurons: {sd_result.n_components}")
-            print(f"    ROI footprints: {cf_result.roifn.shape}")
-            print(f"    Calcium signals: {cf_result.sigfn.shape}")
-            print(f"    Spike trains: {cd_result.spkfn.shape}")
-            print(f"    dF/F traces: {cd_result.dff.shape}")
-
-            print(f"  Per-Stage Results:")
             all_pass = True
             for stage, passed in stage_results.items():
-                status = "PASS" if passed else "FAIL"
-                print(f"    [{status}] {stage}")
+                print(f"{stage:22s}: {'PASS' if passed else 'FAIL'}")
                 all_pass = all_pass and passed
-
-            print(f"\\n  Composability: Module chain produces identical results to monolithic pipeline")
-            _overall = "SUCCESS" if all_pass else "FAILURE"
-            print(f"\\n  ╔══════════════════════════════════════╗")
-            print(f"  ║  OVERALL RESULT: {_overall:<19s} ║")
-            print(f"  ╚══════════════════════════════════════╝")
-            print("=" * 70)""")),
+            print("\\nOverall strict fixture parity:", "PASS" if all_pass else "FAIL")""")),
     ]
     return make_nb(cells)
 

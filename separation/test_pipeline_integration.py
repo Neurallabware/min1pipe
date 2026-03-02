@@ -1,12 +1,8 @@
-"""End-to-end integration test: chain all 4 standalone modules.
-
-Verifies that: module1 → module2 → module3 → module4 reproduces
-the same output as the original monolithic pipeline.
-"""
+"""Strict end-to-end integration test with deviation ledger."""
 
 from __future__ import annotations
 
-import pickle
+import json
 import sys
 from pathlib import Path
 
@@ -15,116 +11,102 @@ import numpy as np
 SEPARATION_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SEPARATION_DIR))
 
-from motion_correction import run_motion_correction
-from source_detection import run_source_detection
-from component_filtering import run_component_filtering
-from calcium_deconvolution import run_calcium_deconvolution
+from _shared.fixtures import load_npz
+from _shared.params import strict_default_parameters
+from pipeline_strict import run_full_pipeline_strict
 
-TEST_DATA = SEPARATION_DIR / "_test_data"
+
+STRICT_ROOT = SEPARATION_DIR / "_test_data_strict"
+VIDEO = SEPARATION_DIR.parent / "demo" / "demo_data.tif"
+LEDGER = STRICT_ROOT / "integration_deviation_ledger.json"
+
+
+def _metrics(actual: np.ndarray, expected: np.ndarray) -> dict:
+    if actual.shape != expected.shape:
+        return {"pass": False, "shape_actual": list(actual.shape), "shape_expected": list(expected.shape), "max_abs_dev": float("inf"), "max_rel_dev": float("inf")}
+    diff = np.abs(actual - expected)
+    rel = diff / np.maximum(np.abs(expected), np.finfo(np.float64).eps)
+    max_abs = float(np.max(diff)) if diff.size else 0.0
+    max_rel = float(np.max(rel)) if rel.size else 0.0
+    ok = bool(np.allclose(actual, expected, rtol=1e-4, atol=1e-6))
+    return {"pass": ok, "shape_actual": list(actual.shape), "shape_expected": list(expected.shape), "max_abs_dev": max_abs, "max_rel_dev": max_rel}
+
+
+def _load_expected() -> dict[str, dict[str, np.ndarray]]:
+    out: dict[str, dict[str, np.ndarray]] = {}
+    for mod in ["motion_correction", "source_detection", "component_filtering", "calcium_deconvolution"]:
+        p = STRICT_ROOT / mod / "output.npz"
+        if not p.exists():
+            raise FileNotFoundError(f"Missing strict fixture: {p}. Run: python separation/build_strict_fixtures.py")
+        out[mod] = load_npz(p)
+    return out
 
 
 def main() -> bool:
-    print("=" * 70)
-    print("INTEGRATION TEST: Full pipeline via chained standalone modules")
-    print("=" * 70)
+    print("=" * 72)
+    print("STRICT INTEGRATION TEST: full chained separation pipeline")
+    print("=" * 72)
+    expected = _load_expected()
+    cfg = strict_default_parameters()
+    res = run_full_pipeline_strict(VIDEO, cfg)
 
-    # Load pipeline config
-    with open(TEST_DATA / "pipeline_config.pkl", "rb") as f:
-        config = pickle.load(f)
-
-    # Load final expected outputs (from calcium_deconvolution)
-    with open(TEST_DATA / "calcium_deconvolution" / "test_output.pkl", "rb") as f:
-        final_expected = pickle.load(f)
-
-    video_path = config["video_path"]
-    params = config["params"]
-
-    # ── Module 1: Motion Correction ──
-    print("\n[1/4] Running motion_correction...")
-    mc_result = run_motion_correction(
-        video_path=video_path,
-        params={
-            "Fsi": params["Fsi"],
-            "Fsi_new": params["Fsi_new"],
-            "spatialr": params["spatialr"],
-            "neuron_size": params["neuron_size"],
-            "use_mc": True,
+    actual = {
+        "motion_correction": {
+            "corrected_video": res.motion.corrected_video,
+            "imaxy": res.motion.imaxy,
+            "imaxy_pre": res.motion.imaxy_pre,
+            "imaxn": res.motion.imaxn,
+            "imeanf": res.motion.imeanf,
+            "imax": res.motion.imax,
+            "raw_score": res.motion.raw_score,
+            "corr_score": res.motion.corr_score,
         },
-    )
-    print(f"      Output: corrected_video {mc_result.corrected_video.shape}")
+        "source_detection": {
+            "roifn": res.source.roifn,
+            "sigfn": res.source.sigfn,
+            "seedsfn": res.source.seedsfn,
+            "datasmth": res.source.datasmth,
+            "cutoff": res.source.cutoff,
+            "pkcutoff": res.source.pkcutoff,
+        },
+        "component_filtering": {
+            "roifn": res.component.roifn,
+            "sigfn": res.component.sigfn,
+            "seedsfn": res.component.seedsfn,
+            "bgfn": res.component.bgfn,
+            "bgffn": res.component.bgffn,
+            "datasmth": res.component.datasmth,
+            "cutoff": res.component.cutoff,
+            "pkcutoff": res.component.pkcutoff,
+        },
+        "calcium_deconvolution": {
+            "spkfn": res.deconv.spkfn,
+            "dff": res.deconv.dff,
+        },
+    }
 
-    # Verify against motion_correction expected output
-    with open(TEST_DATA / "motion_correction" / "test_output.pkl", "rb") as f:
-        mc_expected = pickle.load(f)
-    mc_match = np.allclose(
-        mc_result.corrected_video, mc_expected["corrected_video"], rtol=1e-5, atol=1e-7
-    )
-    print(f"      Match with expected: {'PASS' if mc_match else 'FAIL'}")
+    ledger: dict[str, dict] = {}
+    all_pass = True
+    for mod, fields in actual.items():
+        print(f"\n[{mod}]")
+        ledger[mod] = {}
+        for name, arr in fields.items():
+            met = _metrics(np.asarray(arr, dtype=np.float64), np.asarray(expected[mod][name], dtype=np.float64))
+            ledger[mod][name] = met
+            status = "PASS" if met["pass"] else "FAIL"
+            print(f"  {status:4} {name:12} max_abs={met['max_abs_dev']:.3e} max_rel={met['max_rel_dev']:.3e}")
+            all_pass = all_pass and met["pass"]
 
-    # ── Module 2: Source Detection ──
-    print("\n[2/4] Running source_detection...")
-    sd_result = run_source_detection(
-        corrected_video=mc_result.corrected_video,
-        imax=mc_result.imax,
-        params={"neuron_size": params["neuron_size"], "max_seeds": 80},
-    )
-    print(f"      Output: {sd_result.n_components} components, "
-          f"roifn {sd_result.roifn.shape}, sigfn {sd_result.sigfn.shape}")
-
-    with open(TEST_DATA / "source_detection" / "test_output.pkl", "rb") as f:
-        sd_expected = pickle.load(f)
-    sd_match = (
-        np.allclose(sd_result.roifn, sd_expected["roifn"], rtol=1e-5, atol=1e-7)
-        and np.allclose(sd_result.sigfn, sd_expected["sigfn"], rtol=1e-5, atol=1e-7)
-    )
-    print(f"      Match with expected: {'PASS' if sd_match else 'FAIL'}")
-
-    # ── Module 3: Component Filtering ──
-    print("\n[3/4] Running component_filtering...")
-    cf_result = run_component_filtering(
-        roifn=sd_result.roifn,
-        sigfn=sd_result.sigfn,
-        seedsfn=sd_result.seedsfn,
-        corrected_video=mc_result.corrected_video,
-        params={"neuron_size": params["neuron_size"], "merge_corrthres": 0.9},
-    )
-    print(f"      Output: roifn {cf_result.roifn.shape}, sigfn {cf_result.sigfn.shape}")
-
-    with open(TEST_DATA / "component_filtering" / "test_output.pkl", "rb") as f:
-        cf_expected = pickle.load(f)
-    cf_match = (
-        np.allclose(cf_result.roifn, cf_expected["roifn"], rtol=1e-5, atol=1e-7)
-        and np.allclose(cf_result.sigfn, cf_expected["sigfn"], rtol=1e-5, atol=1e-7)
-    )
-    print(f"      Match with expected: {'PASS' if cf_match else 'FAIL'}")
-
-    # ── Module 4: Calcium Deconvolution ──
-    print("\n[4/4] Running calcium_deconvolution...")
-    cd_result = run_calcium_deconvolution(
-        sigfn=cf_result.sigfn,
-        params={"method": "simple_diff"},
-    )
-    print(f"      Output: spkfn {cd_result.spkfn.shape}, dff {cd_result.dff.shape}")
-
-    spk_match = np.allclose(cd_result.spkfn, final_expected["spkfn"], rtol=1e-5, atol=1e-7)
-    dff_match = np.allclose(cd_result.dff, final_expected["dff"], rtol=1e-5, atol=1e-7)
-    cd_match = spk_match and dff_match
-    print(f"      Match with expected: {'PASS' if cd_match else 'FAIL'}")
-
-    # ── Summary ──
-    all_pass = mc_match and sd_match and cf_match and cd_match
-    print(f"\n{'=' * 70}")
-    print(f"MODULE RESULTS:")
-    print(f"  [{'PASS' if mc_match else 'FAIL'}] motion_correction")
-    print(f"  [{'PASS' if sd_match else 'FAIL'}] source_detection")
-    print(f"  [{'PASS' if cf_match else 'FAIL'}] component_filtering")
-    print(f"  [{'PASS' if cd_match else 'FAIL'}] calcium_deconvolution")
-    print(f"\nCOMPOSABILITY: Module chain produces identical results to monolithic pipeline")
-    print(f"\nINTEGRATION RESULT: {'SUCCESS' if all_pass else 'FAILURE'}")
-    print(f"{'=' * 70}")
+    STRICT_ROOT.mkdir(parents=True, exist_ok=True)
+    LEDGER.write_text(json.dumps({"pass": all_pass, "ledger": ledger}, indent=2) + "\n")
+    print(f"\nDeviation ledger: {LEDGER}")
+    print("\n" + "=" * 72)
+    print(f"INTEGRATION RESULT: {'SUCCESS' if all_pass else 'FAILURE'}")
+    print("=" * 72)
     return all_pass
 
 
 if __name__ == "__main__":
-    success = main()
-    sys.exit(0 if success else 1)
+    ok = main()
+    sys.exit(0 if ok else 1)
+

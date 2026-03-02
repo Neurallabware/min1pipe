@@ -1,8 +1,6 @@
-"""Standalone calcium deconvolution module for calcium imaging.
+"""Strict standalone calcium deconvolution module for calcium imaging.
 
-Extracted from the MIN1PIPE pipeline. This module is fully self-contained.
-
-Pipeline: filtered signals → spike inference → dF/F normalization
+Pipeline: refined signal -> constrained-foopsi-style fallback -> dF/F normalization.
 """
 
 from .core import run_calcium_deconvolution, CalciumDeconvolutionResult

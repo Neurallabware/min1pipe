@@ -26,11 +26,18 @@ Run end-to-end alignment gate (MATLAB reference + Python run + numeric/visual co
 ./scripts/run_demo_alignment_gate.sh --force
 ```
 
+Run strict separated-module gate (Python-only required; MATLAB cross-check optional if artifact exists):
+
+```bash
+./scripts/run_separation_strict_gate.sh --rebuild
+```
+
 Outputs:
 
 - MATLAB artifacts: `artifacts/golden/matlab/demo_data/<timestamp>/`
 - Python artifacts: `artifacts/golden/python/demo_data/<timestamp>/`
 - Alignment report: `artifacts/parity/runtime/demo_alignment_report.md`
+- Separation strict report: `artifacts/parity/runtime/separation_strict_report.md`
 
 ## Key Deliverables
 

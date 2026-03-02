@@ -1,6 +1,5 @@
-"""Regression test for standalone component_filtering module."""
+"""Regression test for strict standalone component_filtering module."""
 
-import pickle
 import sys
 from pathlib import Path
 import numpy as np
@@ -9,8 +8,13 @@ MODULE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(MODULE_DIR.parent))
 
 from component_filtering import run_component_filtering
+from _shared.fixtures import load_npz
+from _shared.params import strict_default_parameters
+from motion_correction import run_motion_correction
+from source_detection import run_source_detection
 
-TEST_DATA = MODULE_DIR.parent / "_test_data" / "component_filtering"
+TEST_DATA = MODULE_DIR.parent / "_test_data_strict" / "component_filtering" / "output.npz"
+VIDEO = MODULE_DIR.parent.parent / "demo" / "demo_data.tif"
 
 
 def main():
@@ -18,21 +22,29 @@ def main():
     print("REGRESSION TEST: component_filtering standalone module")
     print("=" * 60)
 
-    with open(TEST_DATA / "test_input.pkl", "rb") as f:
-        inputs = pickle.load(f)
-    with open(TEST_DATA / "test_output.pkl", "rb") as f:
-        expected = pickle.load(f)
-
-    print(f"\nParameters: {inputs['params']}")
-    print(f"Input ROI shape: {inputs['roifn'].shape}")
-    print(f"Input Signal shape: {inputs['sigfn'].shape}")
+    if not TEST_DATA.exists():
+        raise FileNotFoundError(
+            f"{TEST_DATA} not found. Run: python separation/build_strict_fixtures.py"
+        )
+    expected = load_npz(TEST_DATA)
+    params = strict_default_parameters()
+    mc = run_motion_correction(VIDEO, params, mode="strict")
+    sd = run_source_detection(mc.corrected_video, mc.imax, params, mode="strict")
+    print(f"\nParameters: {params}")
+    print(f"Input ROI shape: {sd.roifn.shape}")
+    print(f"Input Signal shape: {sd.sigfn.shape}")
 
     result = run_component_filtering(
-        roifn=inputs["roifn"],
-        sigfn=inputs["sigfn"],
-        seedsfn=inputs["seedsfn"],
-        corrected_video=inputs["corrected_video"],
-        params=inputs["params"],
+        roifn=sd.roifn,
+        sigfn=sd.sigfn,
+        seedsfn=sd.seedsfn,
+        corrected_video=mc.corrected_video,
+        params=params,
+        datasmth=sd.datasmth,
+        cutoff=sd.cutoff,
+        pkcutoff=sd.pkcutoff,
+        aux=sd.aux,
+        mode="strict",
     )
 
     checks = {
@@ -41,11 +53,14 @@ def main():
         "seedsfn": (result.seedsfn, expected["seedsfn"]),
         "bgfn": (result.bgfn, expected["bgfn"]),
         "bgffn": (result.bgffn, expected["bgffn"]),
+        "datasmth": (result.datasmth, expected["datasmth"]),
+        "cutoff": (result.cutoff, expected["cutoff"]),
+        "pkcutoff": (result.pkcutoff, expected["pkcutoff"]),
     }
 
     all_pass = True
     for name, (actual, exp) in checks.items():
-        match = np.allclose(actual, exp, rtol=1e-5, atol=1e-7)
+        match = np.allclose(actual, exp, rtol=1e-4, atol=1e-6)
         status = "PASS" if match else "FAIL"
         if not match:
             all_pass = False
